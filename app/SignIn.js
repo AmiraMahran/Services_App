@@ -5,7 +5,6 @@ import { StatusBar } from 'expo-status-bar';
 import { Octicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native';
 import { router } from 'expo-router';
-import CostumKeyborderView from '../Components/CostumKeyborderView';
 import { useAuth } from '../firebase/auth';
 import Loading from '../Components/Loading';
 
