@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView ,ScrollView} from 'react-native'
 import React from 'react'
 import Header from '../../Components/HomeComponent/Header'
 import Slider from '../../Components/HomeComponent/Slider'
@@ -7,6 +7,7 @@ import BussindessList from '../../Components/HomeComponent/BussindessList'
 
 export default function Home() {
     return (
+        <ScrollView>
         <SafeAreaView>
         <View>
             <Header/>
@@ -17,6 +18,7 @@ export default function Home() {
             </View>
         </View>
         </SafeAreaView>
+        </ScrollView>
     )
 }
 
