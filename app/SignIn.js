@@ -7,6 +7,8 @@ import { TextInput } from 'react-native';
 import { router } from 'expo-router';
 import { useAuth } from '../firebase/auth';
 import Loading from '../Components/Loading';
+import { Route } from 'expo-router/build/Route';
+import { ActivityIndicator } from 'react-native-web';
 
 
 
@@ -23,6 +25,7 @@ export default function SignIn() {
         }
         setLoding(true);
         const response = await login(emailRef.current, passwordRef.current)
+        
         setLoding(false);
         console.log('sign in response ')
         if (!response.success) {
@@ -70,7 +73,8 @@ export default function SignIn() {
                         {
                             loding ? (
                                 <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-                                    <Loading size={hp(20)} />
+                                    {/* <Loading size={hp(20)} /> */}
+                                    <ActivityIndicator size={'large'} color={'gray'} />
                                 </View>
                             ) : (
 

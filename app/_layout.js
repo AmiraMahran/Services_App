@@ -13,6 +13,8 @@ const MainLayout = () => {
     useEffect(() => {
         if (isAuthenticated == false) {
             router.navigate('/StartPage')
+        } else if (isAuthenticated){
+            router.replace('/Home')
         }
     }, [isAuthenticated])
     return <Slot />
