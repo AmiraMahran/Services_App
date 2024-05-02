@@ -1,0 +1,211 @@
+[
+    {
+        "id":"1001",
+        "name":"Exterior car wash",
+        "contactPerson":"Noah Jack",
+        "email":"Noah315@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/zwdTIJz108Dz.png?o=1",
+        "category":{
+            "id":"101",
+            "name":" Wash car"
+        },
+        "adress":"3641 Douglas Dairy Road, Virginia",
+        "about":"edit"
+    },
+    {
+        "id":"1002",
+        "name":"Car Interior Wash",
+        "contactPerson":"Tyler Nathan",
+        "email":"Tyler7@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/SKWlneulFWxB.png?o=1",
+        "category":{
+            "id":"101",
+            "name":" Wash car"
+        },
+        "adress":"3109 Duffy Street, Indiana",
+        "about":"edit"
+    },
+    {
+        "id":"1003",
+        "name":"Office Cleaning",
+        "contactPerson":"Olivia Liam",
+        "email":"Olivia87@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/ujJMH4lUYawr.png?o=1",
+        "category":{
+            "id":"102",
+            "name":" cleaning"
+        },
+        "adress":"1738 Atha Drive, California",
+        "about":"edit"
+    },
+    {
+        "id":"1004",
+        "name":"Cleaning Room",
+        "contactPerson":"Emma Michael",
+        "email":"Emma123@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/RqizSyK0U39I.png?o=1",
+        "category":{
+            "id":"102",
+            "name":" cleaning"
+        },
+        "adress":"3878 Aaron Smith Drive, Pennsylvania",
+        "about":"edit"
+    },
+    {
+        "id":"1005",
+        "name":"Electricity Repairs ",
+        "contactPerson":"Logan Lucas",
+        "email":"Logan87@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/qCBrTxYCJ1kX.png?o=1",
+        "category":{
+            "id":"103",
+            "name":" Electric"
+        },
+        "adress":"448 Lamberts Branch Road,  Florida",
+        "about":"electric repair steps: Depending on the complexity of the task, we might want to consider whether it’s a simple fix  can be handled easily  or if it requires professional assistance. for example Replacing a Light Switch ,Fixing a Broken Outlet,Changing a Circuit Breaker. first we need to idenify the problem if it was a damage , so we need to turn off the power to remove the old switch then replace it with the new one after that test if it works"
+    },
+    {
+        "id":"1006",
+        "name":"Laundry ",
+        "contactPerson":"Amelia Alexander",
+        "email":"Amelia82@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/z7XRnNAgcxqr.png?o=1",
+        "category":{
+            "id":"104",
+    "name":" Laundry"
+        },
+        "adress":" 1500 Birch Street, Kentucky",
+        "about":"edit"
+    },
+    {
+        "id":"1007",
+        "name":"Ironing ",
+        "contactPerson":"Hannah Alexander",
+        "email":"Hannah@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/qCBrTxYCJ1kX.png?o=1",
+        "category":{
+            "id":"104",
+    "name":" Laundry"
+        },
+        "adress":" 1934 Murry Street, Norfolk",
+        "about":"iron the clothes steps:first we need to Prepare the Ironing Area so that it is flat surface.then sort the Laundry by Material so that Different fabrics need Different degree of heat , as the heat could be low / hight / meduim.check if the iron is ready & heated to start.after ironing the cloth it will be hanged in the closet"
+    },
+    {
+        "id":"1008",
+        "name":"Moving furniture ",
+        "contactPerson":"Joshua Aiden",
+        "email":"Joshua@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/GhfbbQ5MBrB0.png?o=1",
+        "category":{
+            "id":"107",
+            "name":"Shifting"
+        },
+        "adress":" 3176 Broadcast Drive, Virginia",
+        "about":"Moving heavy furniture upstairs can be a challenging task, but with the right techniques, it will be moved safely. we could Disassemble Furniture: If possible, take apart any heavy furniture before starting moving it upstairs Protect the Furniture: Wrap large pieces of furniture in blankets, shrink wrap, or bubble wrap. This not only protects the furniture from scratches but also prevents damage to the stairs, walls, and doorways Use moving tools when possible as Furniture slider"
+    },
+    {
+        "id":"1009",
+        "name":"House Paint ",
+        "contactPerson":"Grace Elijah",
+        "email":"Grace@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/n8kccxnzaD6Z.png?o=1",
+        "category":{
+            "id":"105",
+            "name":"Painting"
+        },
+        "adress":" 14 Red Hawk Road, Minnesota",
+        "about":"Painting walls can be a rewarding DIY project that freshens up your space. we need from you first to make these previous steps. first Decide on the color you want for your walls.then Consider whether you’ll need to move furniture or cover it with drop cloths. Choose the right time to paint as we don't want to be interrupted. we then starts to Clean the Walls Before Painting,then set the needed color , use a brush, roller, or both, also we use a primer then we mix the paints and start the proccess"
+    },
+    {
+        "id":"1010",
+        "name":"General repairs ",
+        "contactPerson":"Sarah Benjamin",
+        "email":"Sarah@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/blT9hMuJUE3D.png?o=1",
+        "category":{
+            "id":"106",
+            "name":"Repair"
+        },
+        "adress":" 1150 Masonic Hill Road, Arkansas",
+        "about":"edit"
+    },
+    {
+        "id":"1011",
+        "name":"Air conditioner repair ",
+        "contactPerson":"Nicholas Caleb",
+        "email":"Nicholas@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/6ytNb20JDszX.png?o=1",
+        "category":{
+            "id":"106",
+            "name":"Repair"
+        },
+        "adress":" 1273 Woodland Avenue,  Louisiana",
+        "about":"edit"
+    },
+    {
+        "id":"1012",
+        "name":"Bathroom sink repair ",
+        "contactPerson":"Zachary Oliver",
+        "email":"Zachary@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/QYqcOu0YezAT.png?o=1",
+        "category":{
+            "id":"106",
+            "name":"Repair"
+        },
+        "adress":" 2744 Burning Memory Lane, Pennsylvania",
+        "about":"edit"
+    },
+    {
+        "id":"1013",
+        "name":"Kitchen sink repair ",
+        "contactPerson":"Joseph Connor",
+        "email":"Joseph@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/27pIS6f1fYch.png?o=1",
+        "category":{
+            "id":"106",
+            "name":"Repair"
+        },
+        "adress":" 3734 Reel Avenue, New Mexico",
+        "about":"edit"
+    },
+    {
+        "id":"1014",
+        "name":"Washing Machine repair ",
+        "contactPerson":"Hunter Evan",
+        "email":"Hunter@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/eVsH2UXngqmW.png?o=1",
+        "category":{
+            "id":"106",
+            "name":"Repair"
+        },
+        "adress":" 4835 Lawman Avenue, Virginia",
+        "about":"edit"
+    },
+    {
+        "id":"1015",
+        "name":"Floor Surveying ",
+        "contactPerson":"Maya Cameron",
+        "email":"Maya@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/NfcBFyKov8Ul.png?o=1",
+        "category":{
+            "id":"102",
+            "name":" cleaning"
+        },
+        "adress":" 1273 Woodland Avenue, Louisiana",
+        "about":"edit"
+    },
+    {
+        "id":"1016",
+        "name":"Clear glass ",
+        "contactPerson":"Julia Henry",
+        "email":"Julia@gmail.com",
+        "image":"https://i.postimg.cc/Dz9gsQdY/Wipe-the-glass.png",
+        "category":{
+            "id":"102",
+            "name":" cleaning"
+        },
+        "adress":"  1150 Masonic Hill Road, Arkansas",
+        "about":"edit"
+    }
+   
+]
