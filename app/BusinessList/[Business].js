@@ -8,7 +8,7 @@ export default function Business() {
     console.log("all", image);
   return (
     <View>
-      <BusinessDetailScreen name= {name} id = {id}   image= {image}/>
+      <BusinessDetailScreen name= {name} id = {id} image= {image}/>
     </View>
   )
 }

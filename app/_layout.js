@@ -3,18 +3,22 @@ import React, { useEffect } from 'react'
 import { Slot, router, useRouter, useSegments } from 'expo-router'
 import { MenuProvider } from 'react-native-popup-menu';
 import { AuthContextProvider, useAuth } from '../firebase/auth';
-import StartPage from './StartPage';
-import SignUp from './SignUp';
+
 
 
 const MainLayout = () => {
     const { isAuthenticated } = useAuth();
+    const segments = useSegments();
+    const router = useRouter();
 
     useEffect(() => {
-        if (isAuthenticated == false) {
-            router.navigate('/StartPage')
-        } else if (isAuthenticated){
+        // Check If User Is Authenticated Or Not
+        if (typeof isAuthenticated === "undefined") return;
+        const inApp = segments[0] === "(tabs)";
+        if (isAuthenticated  && !inApp) {
             router.replace('/Home')
+        } else if (isAuthenticated== false){
+            router.navigate('/Home')
         }
     }, [isAuthenticated])
     return <Slot />

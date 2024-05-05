@@ -9,7 +9,7 @@ export default function TabsLayout() {
             <Tabs.Screen
                 name="Home"
                 options={{
-                    headerTitle: "Home",
+                    headerShown: false,
                     title: "Home",
                     headerTitleAlign: "center",
                     tabBarIcon: ({color}) => (
@@ -19,6 +19,7 @@ export default function TabsLayout() {
                     headerStyle: {
                         backgroundColor: "lightblue",
                     },
+                    
                 }}
             />
             <Tabs.Screen
