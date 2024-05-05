@@ -18,7 +18,7 @@ const MainLayout = () => {
         if (isAuthenticated  && !inApp) {
             router.replace('/Home')
         } else if (isAuthenticated== false){
-            router.navigate('/Home')
+            router.navigate('/StartPage')
         }
     }, [isAuthenticated])
     return <Slot />
