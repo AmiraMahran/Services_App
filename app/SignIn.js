@@ -8,7 +8,7 @@ import { router } from 'expo-router';
 import { useAuth } from '../firebase/auth';
 import Loading from '../Components/Loading';
 import { Route } from 'expo-router/build/Route';
-import { ActivityIndicator } from 'react-native-web';
+import { ActivityIndicator } from 'react-native';
 
 
 

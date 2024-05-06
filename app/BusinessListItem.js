@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
 import { router } from "expo-router";
 export default function BusinessListItem({ all }) {
- 
+
   const fun = () => {
     router.push({
       pathname: "/BusinessList/[Business]", 

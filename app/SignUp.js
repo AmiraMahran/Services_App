@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Pressable, Alert, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable, Alert, ScrollView, ActivityIndicator } from 'react-native'
 import React, { useRef, useState } from 'react'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { StatusBar } from 'expo-status-bar';
@@ -6,7 +6,7 @@ import { Feather, Octicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native';
 import { router } from 'expo-router';
 
-import Loading from '../Components/Loading';
+
 import { useAuth } from '../firebase/auth';
 
 
@@ -80,7 +80,8 @@ export default function SignUp() {
                         {
                             loding ? (
                                 <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-                                    <Loading size={hp(20)} />
+                                    {/* <Loading size={hp(20)} /> */}
+                                    <ActivityIndicator size={'large'} color={'gray'} />
                                 </View>
                             ) : (
                                 
