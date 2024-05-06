@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
+import { MaterialIcons } from '@expo/vector-icons';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
 
@@ -61,20 +62,25 @@ export default function BusinessDetailScreen({ name, id, image }) {
                 </Text>
                 <Text style={styles.Category}>{item.category.name}</Text>
               </View>
-              <Text style={{ fontSize: 17, color: "gray" }}>
-                <Entypo name="location-pin" size={24} color="purple" /> {item.adress}
+              <View style = {{display: "flex", flexDirection: "row"}}>
+              <MaterialIcons name="location-pin" size={30} color="purple" />
+              <Text style={{ fontSize: 20, color: "gray" }}>
+                 {item.adress}
               </Text>
+              </View>
             </View>
             <View
               style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
             >
-              <Text> About Me </Text>
+              <Text style = {{paddingHorizontal:4}}> About Me </Text>
               <Text
                 style={{
                   fontFamily: "out-fit",
                   color: "gray",
                   lineHeight: 28,
                   fontSize: 16,
+                 marginHorizontal:12
+                 
                 }}
                 numberOfLines={ReadMore ? 20 : 5}
               >
