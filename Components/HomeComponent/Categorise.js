@@ -75,7 +75,7 @@ export default function Categorise() {
               }}>
                 <Image
                   source={{ uri: item.image }}
-                  style={{ width: 40, height: 40, objectFit: 'contain' }}
+                  style={{ width: 50, height: 50, objectFit: 'contain'}}
                 />
               </Pressable>
             </View>

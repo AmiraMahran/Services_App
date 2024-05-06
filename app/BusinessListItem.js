@@ -1,7 +1,5 @@
 import { View, Text, Image, StyleSheet ,TouchableOpacity} from "react-native";
 import React from "react";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { router } from "expo-router";
 export default function BusinessListItem({ all }) {
@@ -12,6 +10,7 @@ export default function BusinessListItem({ all }) {
       params: { name: all.name, id: all.id ,image: all.image }, 
     })
   }
+  
   return (
     <TouchableOpacity style={styles.container}  onPress={fun}>
       <Image source={{ uri: all.image }} style={styles.image} />

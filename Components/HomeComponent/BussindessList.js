@@ -68,13 +68,13 @@ export default function BussindessList() {
             />
             <View style={styles.infoContainer}>
             <Text style={{fontFamily:'outfit-medium',fontSize:17}}>{item?.name}</Text>
-            <Text style={{fontFamily:'outfit',fontSize:13,color:'gray'}}>{item?.contactPerson}</Text>
+            <Text style={{fontFamily:'outfit',fontSize:13,color:'#003C43'}}>{item?.contactPerson}</Text>
             <Text style={{
                 fontFamily:'outfit',
                 fontSize:10,
                 padding:3,
-                color:'gray',
-                backgroundColor:'white',
+                color:'#003C43',
+                backgroundColor:'#77B0AA',
                 borderRadius:3,
                 alignSelf:'flex-start',
                 paddingHorizontal:7
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     },
     container:{
        padding:10,
-       backgroundColor:'white', 
+       backgroundColor:'#E3FEF7', 
        borderRadius:10
     },
     infoContainer:{

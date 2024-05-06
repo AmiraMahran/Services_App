@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     container: {
         padding: 20,
         paddingTop: 40,
-        backgroundColor: 'pink',
+        backgroundColor: '#003c43',
         borderBottomLeftRadius: 25,
         borderBottomRightRadius: 25,
 
