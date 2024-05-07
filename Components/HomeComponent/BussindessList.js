@@ -68,29 +68,7 @@ export default function BussindessList() {
         showsHorizontalScrollIndicator={false}
 
         renderItem={({ item }) => (
-<<<<<<< HEAD
-        <View style={{marginRight:10}}>
-          <View style={styles.container}>
-            <Image
-              source={{ uri: item.image }}
-              style={styles.image}
-            
-            />
-            <View style={styles.infoContainer}>
-            <Text style={{fontFamily:'outfit-medium',fontSize:17}}>{item?.name}</Text>
-            <Text style={{fontFamily:'outfit',fontSize:13,color:'#003C43'}}>{item?.contactPerson}</Text>
-            <Text style={{
-                fontFamily:'outfit',
-                fontSize:10,
-                padding:3,
-                color:'#003C43',
-                backgroundColor:'#77B0AA',
-                borderRadius:3,
-                alignSelf:'flex-start',
-                paddingHorizontal:7
-                }}>{item?.category.name}</Text>   
-            </View>
-=======
+
           <View style={{ marginRight: 10 }}>
             <Pressable onPress={() => fun(item?.contactPerson ,item?.id , item?.image)}>
               <View style={styles.container}>
@@ -116,7 +94,7 @@ export default function BussindessList() {
                 </View>
               </View>
             </Pressable>
->>>>>>> 3448fd2039f481edfc7c1c2926510489340eded2
+
           </View>
         )}
       />
@@ -125,24 +103,6 @@ export default function BussindessList() {
 }
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD
-    image:{
-        width:160,
-        height:100,
-        borderRadius:10,
-        
-    },
-    container:{
-       padding:10,
-       backgroundColor:'#E3FEF7', 
-       borderRadius:10
-    },
-    infoContainer:{
-        padding:7,
-        display:'flex',
-        gap:3
-    }
-=======
   image: {
     width: 160,
     height: 100,
@@ -159,5 +119,4 @@ const styles = StyleSheet.create({
     display: 'flex',
     gap: 3
   }
->>>>>>> 3448fd2039f481edfc7c1c2926510489340eded2
 })

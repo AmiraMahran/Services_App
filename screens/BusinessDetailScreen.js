@@ -37,11 +37,6 @@ export default function BusinessDetailScreen({ name, id, image }) {
   }, [])
   if (loading) {
     return (
-<<<<<<< HEAD
-      <ScrollView>
-        <View style={styles.Container}>
-            <TouchableOpacity
-=======
       <View style={styles.Container}>
         <ScrollView style={{ height: "90%" }}>
           <TouchableOpacity
@@ -80,7 +75,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
           >
             <Text style={{ paddingHorizontal: 4 }}> About Me </Text>
             <Text
->>>>>>> 3448fd2039f481edfc7c1c2926510489340eded2
+
               style={{
                 fontFamily: "out-fit",
                 color: "gray",
@@ -97,28 +92,15 @@ export default function BusinessDetailScreen({ name, id, image }) {
               <Text style={{ color: "#b891c8", fontSize: 20, fontWeight: "500" }}>
                 {ReadMore ? "Read Less" : " Read More"}
               </Text>
-<<<<<<< HEAD
-              <Pressable onPress={() => setReadMore(!ReadMore)}>
-                <Text style={{ color: "#b891c8", fontSize: 20, fontWeight: "500" }}>
-                  {ReadMore ? "Read Less" : " Read More"}
-                </Text>
-              </Pressable>
-            </View>
-            <View
-              style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
-            ></View>
-          
-          <Reviews serviceId={id}/>
-          <View style= {{display:'flex',flexDirection:'row', gap:5,margin:8}}>
-=======
-            </Pressable>
+             </Pressable>
           </View>
           <View
             style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
           ></View>
         </ScrollView>
+        <Reviews serviceId={id}/>
         <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
->>>>>>> 3448fd2039f481edfc7c1c2926510489340eded2
+
           <TouchableOpacity style={styles.messagebtn}>
             <Text
               style={{
@@ -144,20 +126,12 @@ export default function BusinessDetailScreen({ name, id, image }) {
             </Text>
           </TouchableOpacity>
         </View>
-<<<<<<< HEAD
-        </ScrollView>
-      );
- }else{
-    return(
-        <ActivityIndicator size="large" />
-=======
 
       </View>
     );
   } else {
     return (
       <ActivityIndicator size="large" />
->>>>>>> 3448fd2039f481edfc7c1c2926510489340eded2
     )
   }
 

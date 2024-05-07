@@ -1,12 +1,6 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-<<<<<<< HEAD:app/BusinessListItem.js
-import { Entypo } from "@expo/vector-icons";
-=======
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
->>>>>>> 3448fd2039f481edfc7c1c2926510489340eded2:app/BusinessListItems.js
 import { router } from "expo-router";
 export default function BusinessListItem({ all }) {
 
