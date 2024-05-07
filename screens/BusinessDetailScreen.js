@@ -14,6 +14,7 @@ import { router } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
+import Reviews from "./Reviews";
 
 export default function BusinessDetailScreen({ name, id, image }) {
   const [ReadMore, setReadMore] = useState(false);
@@ -35,8 +36,8 @@ export default function BusinessDetailScreen({ name, id, image }) {
  },[])
  if(loading){
     return (
+      <ScrollView>
         <View style={styles.Container}>
-          <ScrollView style={{ height: "90%" }}>
             <TouchableOpacity
               style={{
                 display: "flex",
@@ -89,7 +90,8 @@ export default function BusinessDetailScreen({ name, id, image }) {
             <View
               style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
             ></View>
-          </ScrollView>
+          
+          <Reviews serviceId={id}/>
           <View style= {{display:'flex',flexDirection:'row', gap:5,margin:8}}>
           <TouchableOpacity style={styles.messagebtn}>
             <Text
@@ -118,6 +120,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
           </View>
        
         </View>
+        </ScrollView>
       );
  }else{
     return(
