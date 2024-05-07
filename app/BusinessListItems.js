@@ -1,19 +1,19 @@
-import { View, Text, Image, StyleSheet ,TouchableOpacity} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
 import { router } from "expo-router";
 export default function BusinessListItem({ all }) {
- 
+
   const fun = () => {
     router.push({
-      pathname: "/BusinessList/[Business]", 
-      params: { name: all.name, id: all.id ,image: all.image }, 
+      pathname: "/BusinessList/[Business]",
+      params: { name: all.name, id: all.id, image: all.image },
     })
   }
   return (
-    <TouchableOpacity style={styles.container}  onPress={fun}>
+    <TouchableOpacity style={styles.container} onPress={fun}>
       <Image source={{ uri: all.image }} style={styles.image} />
       <View style={styles.suncontainer}>
         <Text
@@ -30,12 +30,12 @@ export default function BusinessListItem({ all }) {
         >
           {all.name}
         </Text>
-        <View style = {{display: "flex", flexDirection: "row"}}>
-        <MaterialIcons name="location-pin" size={15} color="purple" />
-              <Text style={{ fontSize: 11, color: "gray" ,marginEnd:70}}>
-                 {all.adress}
-              </Text>
-              </View>
+        <View style={{ display: "flex", flexDirection: "row" }}>
+          <MaterialIcons name="location-pin" size={15} color="purple" />
+          <Text style={{ fontSize: 11, color: "gray", marginEnd: 70 }}>
+            {all.adress}
+          </Text>
+        </View>
       </View>
     </TouchableOpacity>
   );
