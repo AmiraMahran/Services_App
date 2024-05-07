@@ -1,17 +1,19 @@
 import { View, Text, Image, StyleSheet, TextInput } from 'react-native'
 import React from 'react'
 import { FontAwesome } from '@expo/vector-icons'
+import { useAuth } from '../../firebase/auth'
 
 export default function Header() {
+    const {user}= useAuth();
     return (
         <View style={styles.container}>
             {/**Profile Section */}
             <View style={styles.profileMainContainer}>
                 <View style={styles.profileContainer}>
-                    <Image source={require('../../assets/images/avatar.png')} style={styles.userImage} />
+                    <Image source={{uri:user?.profileUrl}} style={styles.userImage} />
                     <View>
                         <Text style={{ color: 'white' }}> Welcome </Text>
-                        <Text style={{ color: 'white', fontSize: 20 }}> username </Text>
+                        <Text style={{ color: 'white', fontSize: 20 }}> {user?.username} </Text>
                     </View>
                 </View>
                 <FontAwesome name='bookmark-o' size={27} color="white" />

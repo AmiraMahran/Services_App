@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import DATA from '../Components/HomeComponent/Data/BussinessListData.json'
 import { list } from 'firebase/storage';
-import BusinessListItem from './BusinessListItem';
+import BusinessListItem from './BusinessListItems';
 import {
   getDocs,
   doc,
