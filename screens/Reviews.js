@@ -1,21 +1,22 @@
 // Reviews.js
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Pressable, StyleSheet, Image, FlatList, ScrollView } from 'react-native';
 import { db } from '../FirebaseConfig';
 import { addDoc, collection, doc, serverTimestamp, setDoc, onSnapshot } from 'firebase/firestore';
 import { Feather } from '@expo/vector-icons';
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useAuth } from '../firebase/auth';
 
 const Reviews = ({ serviceId }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
-
+  const { user } = useAuth();
   useEffect(() => {
     const commentsRef = collection(db, `services/${serviceId}/comments`);
-    const unsubscribe = onSnapshot(commentsRef, async(snapshot) => {
+    const unsubscribe = onSnapshot(commentsRef, async (snapshot) => {
       const commentArray = snapshot.docs.map((doc) => doc.data());
       setComments(commentArray);
-      await AsyncStorage.setItem('comments', JSON.stringify(commentArray)); 
+      await AsyncStorage.setItem('comments', JSON.stringify(commentArray));
     });
 
     return () => {
@@ -31,6 +32,8 @@ const Reviews = ({ serviceId }) => {
         await addDoc(collection(db, `services/${serviceId}/comments`), {
           text: newComment,
           timestamp: serverTimestamp(),
+          username: user?.username,
+          profileUrl: user?.profileUrl
         });
         setNewComment('');
       } catch (error) {
@@ -51,15 +54,31 @@ const Reviews = ({ serviceId }) => {
 
   return (
     <View style={styles.container}>
+      <ScrollView>
       <Text style={styles.title}>Reviews</Text>
       <View style={styles.commentsContainer}>
-        {comments.map((comment) => (
+        <FlatList
+          data={comments}
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+           keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item }) => (
+            <View style={styles.commentCard}>
+              <View style={styles.userContainer}>
+                <Image
+                  source={{ uri: item.profileUrl }} // Ensure profileUrl is valid
+                  style={styles.profileImage}
+                />
+                <Text style={styles.commentUser}>{item.username}</Text>
+              </View>
+              <Text style={styles.commentText}>{item.text}</Text>
+            </View>
+          )}
+        />
 
-          <Text style={styles.commentText}>{comment.text}</Text>
-
-
-        ))}
       </View>
+
+
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Add a comment"
@@ -71,33 +90,43 @@ const Reviews = ({ serviceId }) => {
           <Feather name="send" size={20} color="#E3FEF7" />
         </Pressable>
       </View>
+      </ScrollView>
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
-  
-    width: '70%',
-    marginLeft: '15%',
-    borderRadius: 10,
+
+    width: '90%',
+    marginLeft: '5%',
     padding: 10,
-    marginBottom:"5%"
-   
+    marginBottom: 10,
+    borderWidth:1,
+    borderRadius:5,
+    backgroundColor:"#003c43"
+    
+    
+
+
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 8,
+    textAlign:"center",
+    color:'white'
   },
   commentsContainer: {
-    flexDirection: 'column-reverse',
-    
+    backgroundColor: 'linear-gradient(to bottom, #0074D9, #00AEEF)',
+    padding: 16,
+
   },
   commentText: {
-    marginBottom: 8,
-      backgroundColor: '#E3FEF7',
-      borderRadius:5,
-      
+    fontSize: 18,
+    color: 'black',
+    width: 90,
+    
+
 
   },
   inputContainer: {
@@ -114,13 +143,38 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   sendButton: {
-    backgroundColor: '#003C43',
+    backgroundColor: '#77b0aa',
     width: 40,
     height: 40,
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: 10,
+  },
+  userContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  profileImage: {
+    width: 40,
+    height: 40,
+    borderRadius: 20, // Make it circular
+    marginRight: 8,
+   
+  },
+  commentUser: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  commentCard: {
+    backgroundColor: '#77b0aa',
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 10,
+    borderWidth:1,
+    marginRight:8
   },
 });
 

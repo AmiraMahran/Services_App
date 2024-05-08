@@ -6,8 +6,7 @@ import {
   Image,
   Pressable,
   ScrollView,
-  ActivityIndicator,
-  Linking
+  ActivityIndicator
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
@@ -39,8 +38,10 @@ export default function BusinessDetailScreen({ name, id, image }) {
 
   if (loading) {
     return (
+      <SafeAreaView>
+      <ScrollView>
       <View style={styles.Container}>
-        <ScrollView style={{ height: "90%" }}>
+        <ScrollView >
           <TouchableOpacity
             style={{
               display: "flex",
@@ -98,7 +99,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
             style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
           ></View>
         </ScrollView>
-        <Reviews serviceId={id}/>
+        <Reviews serviceId={id} />
         <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
 
           <TouchableOpacity style={styles.messagebtn}>
@@ -128,6 +129,8 @@ export default function BusinessDetailScreen({ name, id, image }) {
         </View>
 
       </View>
+      </ScrollView>
+      </SafeAreaView>
     );
   } else {
     return (
