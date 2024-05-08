@@ -51,13 +51,7 @@ export default function BussindessList() {
     }
   };
 
-  const fun = ({name , id , image}) => {
-    router.push({
-      pathname: "/BusinessList/[Business]",
-      params: { name: name, id: id, image: image },
-    })
-  }
-
+  
   return (
     <View style={{ marginTop: 10 }}>
       <Heading text={'Latest Business'} isViewAll={true} />
@@ -69,7 +63,12 @@ export default function BussindessList() {
 
         renderItem={({ item }) => (
           <View style={{ marginRight: 10 }}>
-            <Pressable onPress={() => fun(item?.contactPerson ,item?.id , item?.image)}>
+            <Pressable onPress={() => {
+              router.push({
+                pathname: "/BusinessList/[Business]",
+                params: { name: item?.name, id: item?.id, image: item?.image },
+              })
+}}>
               <View style={styles.container}>
 
                 <Image

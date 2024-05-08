@@ -17,11 +17,12 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
 
 export default function BusinessDetailScreen({ name, id, image }) {
+  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
   const [ReadMore, setReadMore] = useState(false);
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
   const getOne = async () => {
-    const docRef = doc(db, `BusinessListByCategory`, id);
+    const docRef = doc(db, `BusinessListByCategory`, id );
 
     const docSnap = await getDoc(docRef);
 
