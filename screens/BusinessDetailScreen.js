@@ -6,7 +6,8 @@ import {
   Image,
   Pressable,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
+  Linking
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
@@ -18,7 +19,6 @@ import { db } from "../FirebaseConfig";
 import Reviews from "./Reviews";
 
 export default function BusinessDetailScreen({ name, id, image }) {
-  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
   const [ReadMore, setReadMore] = useState(false);
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
@@ -36,6 +36,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
   useEffect(() => {
     getOne();
   }, [])
+
   if (loading) {
     return (
       <View style={styles.Container}>
@@ -76,14 +77,12 @@ export default function BusinessDetailScreen({ name, id, image }) {
           >
             <Text style={{ paddingHorizontal: 4 }}> About Me </Text>
             <Text
-
               style={{
                 fontFamily: "out-fit",
                 color: "gray",
                 lineHeight: 28,
                 fontSize: 16,
                 marginHorizontal: 12
-
               }}
               numberOfLines={ReadMore ? 20 : 5}
             >
@@ -93,7 +92,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
               <Text style={{ color: "#b891c8", fontSize: 20, fontWeight: "500" }}>
                 {ReadMore ? "Read Less" : " Read More"}
               </Text>
-             </Pressable>
+            </Pressable>
           </View>
           <View
             style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}

@@ -43,6 +43,8 @@ const AuthContextProvider = ({ children }) => {
                 username: data.username,
                 profileUrl: data.profileUrl,
                 userId: data.userId,
+                email:data.email,
+                password:data.password
             });
         } else {
             console.log("No such document!");
@@ -86,11 +88,13 @@ const AuthContextProvider = ({ children }) => {
                 email,
                 password
             );
-            console.log("responce.user : ", response?.user);
+            // console.log("responce.user : ", response?.user);
 
             await setDoc(doc(db, "users", response?.user?.uid), {
                 username,
                 profileUrl,
+                email,
+                password,
                 userId: response?.user?.uid,
             });
             return { success: true, Data: response?.user };

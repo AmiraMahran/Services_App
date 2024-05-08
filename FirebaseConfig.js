@@ -1,23 +1,18 @@
 
 import { initializeApp } from "firebase/app";
-
-
 import { getReactNativePersistence } from '@firebase/auth/dist/rn/index.js';
-
 import {getFirestore,collection} from 'firebase/firestore'
-
-
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { initializeAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCFfGCsnXBokPUKBuRTnVaWkwZwdKrp_X0",
-  authDomain: "homeservice-cab80.firebaseapp.com",
-  projectId: "homeservice-cab80",
-  storageBucket: "homeservice-cab80.appspot.com",
-  messagingSenderId: "837297059373",
-  appId: "1:837297059373:web:50a15ca07f1bc289156aa4"
+  apiKey: "AIzaSyCpcdgtAPlzQe3kbUfKUay8Uyr8AgmauNE",
+  authDomain: "finalproject-1270b.firebaseapp.com",
+  projectId: "finalproject-1270b",
+  storageBucket: "finalproject-1270b.appspot.com",
+  messagingSenderId: "1092599420198",
+  appId: "1:1092599420198:web:4396dd5d8fee057c195de7"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

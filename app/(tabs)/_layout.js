@@ -41,6 +41,7 @@ export default function TabsLayout() {
                 name="ProfilePage"
                 options={{
                     headerTitle: "ProfilePage",
+                    headerShown: false,
                     title: "ProfilePage",
                     headerTitleAlign: "center",
                     tabBarIcon: ({ color }) => (

@@ -16,7 +16,7 @@ export default function BusinessListItem({ all }) {
       <Image source={{ uri: all.image }} style={styles.image} />
       <View style={styles.suncontainer}>
         <Text
-          style={{ fontFamily: "outfit", color: "light gray", fontSize: 15 }}
+          style={{ color: "light gray", fontSize: 15 }}
         >
           {all.contactPerson}
         </Text>
