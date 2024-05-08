@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, setDoc, doc } from 'firebase/firestore';
 import { db } from '../../FirebaseConfig';
 import Heading from './Heading';
-import data from './Data/categoriseData.json'
+import data from './Data/CategoriseData.json'
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import BusinessListByCategoryScreen from '../../app/BusinessListByCategoryScreen';
 import { router } from 'expo-router';
@@ -75,7 +75,7 @@ export default function Categorise() {
               }}>
                 <Image
                   source={{ uri: item.image }}
-                  style={{ width: 40, height: 40, objectFit: 'contain' }}
+                  style={{ width: 50, height: 50, objectFit: 'contain'}}
                 />
               </Pressable>
             </View>

@@ -62,6 +62,7 @@ export default function BussindessList() {
         showsHorizontalScrollIndicator={false}
 
         renderItem={({ item }) => (
+
           <View style={{ marginRight: 10 }}>
             <Pressable onPress={() => {
               router.push({
@@ -92,6 +93,7 @@ export default function BussindessList() {
                 </View>
               </View>
             </Pressable>
+
           </View>
         )}
       />

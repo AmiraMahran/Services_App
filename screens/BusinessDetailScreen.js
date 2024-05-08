@@ -15,6 +15,7 @@ import { Entypo } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
+import Reviews from "./Reviews";
 
 export default function BusinessDetailScreen({ name, id, image }) {
   console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
@@ -75,6 +76,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
           >
             <Text style={{ paddingHorizontal: 4 }}> About Me </Text>
             <Text
+
               style={{
                 fontFamily: "out-fit",
                 color: "gray",
@@ -91,13 +93,15 @@ export default function BusinessDetailScreen({ name, id, image }) {
               <Text style={{ color: "#b891c8", fontSize: 20, fontWeight: "500" }}>
                 {ReadMore ? "Read Less" : " Read More"}
               </Text>
-            </Pressable>
+             </Pressable>
           </View>
           <View
             style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
           ></View>
         </ScrollView>
+        <Reviews serviceId={id}/>
         <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
+
           <TouchableOpacity style={styles.messagebtn}>
             <Text
               style={{

@@ -43,7 +43,7 @@
         "name":"Cleaning Room",
         "contactPerson":"Emma Michael",
         "email":"Emma123@gmail.com",
-        "image":"https://gcdnb.pbrd.co/images/RqizSyK0U39I.png?o=1",
+        "image":"",
         "category":{
             "id":"102",
             "name":" cleaning"
@@ -56,7 +56,7 @@
         "name":"Electricity Repairs ",
         "contactPerson":"Logan Lucas",
         "email":"Logan87@gmail.com",
-        "image":"https://gcdnb.pbrd.co/images/qCBrTxYCJ1kX.png?o=1",
+        "image":"https://gcdnb.pbrd.co/images/RqizSyK0U39I.png?o=1",
         "category":{
             "id":"103",
             "name":" Electric"
