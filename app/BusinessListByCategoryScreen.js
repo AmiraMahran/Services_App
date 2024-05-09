@@ -15,6 +15,7 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "../FirebaseConfig";
 import { router, useLocalSearchParams } from 'expo-router';
+import PageHeading from '../Components/HomeComponent/PageHeading';
 export default function BusinessListByCategoryScreen() {
   const { name } = useLocalSearchParams();
   const [List, setList] = useState([]);
@@ -43,12 +44,7 @@ export default function BusinessListByCategoryScreen() {
   }, []);
   return (
     <View style={{ padding: 20, paddingTop: 40, backgroundColor: '#DDDDDD', height: '100%' }}>
-      <View style={{ display: 'flex', flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-        <Pressable onPress={() => router.back()}>
-          <Ionicons name="arrow-back-outline" size={24} color="black" />
-        </Pressable>
-        <Text style={{ fontSize: 25, fontFamily: 'outfit-medium' }}> {name}</Text>
-      </View>
+      <PageHeading title={param.category}/>
       <FlatList data={List} style={{ marginTop: 15 }} renderItem={({ item }) => <BusinessListItem all={item} />} />
     </View>
   )
