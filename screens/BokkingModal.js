@@ -104,6 +104,8 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(147, 147, 235)",
     padding: 20,
     borderRadius: 15,
+    marginLeft:10,
+    marginRight:10
   },
   btn: {
     display: "flex",
