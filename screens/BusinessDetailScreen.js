@@ -133,7 +133,8 @@ onPress={()=>setShowModel(true)}              >
               animationType='slide'
               visible={showModal}
             >
-              <BokkingModal hideModel={()=>setShowModel(false)}/>
+              <BokkingModal 
+              hideModel={()=>setShowModel(false)}/>
 
             </Modal>
           </View>
