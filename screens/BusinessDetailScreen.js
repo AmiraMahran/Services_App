@@ -65,13 +65,13 @@ export default function BusinessDetailScreen({ name, id, image }) {
                   {item.name}
                 </Text>
                 <View style={styles.subContainer}>
-                  <Text style={{ color: "#b891c8", fontSize: 20 }}>
+                  <Text style={{ color: "#003C43", fontSize: 20 }}>
                     {item.contactPerson}
                   </Text>
                   <Text style={styles.Category}>{item.category.name}</Text>
                 </View>
                 <View style={{ display: "flex", flexDirection: "row" }}>
-                  <MaterialIcons name="location-pin" size={30} color="purple" />
+                  <MaterialIcons name="location-pin" size={30} color="#003C43" />
                   <Text style={{ fontSize: 20, color: "gray" }}>
                     {item.adress}
                   </Text>
@@ -94,7 +94,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
                   {item.about}
                 </Text>
                 <Pressable onPress={() => setReadMore(!ReadMore)}>
-                  <Text style={{ color: "#b891c8", fontSize: 20, fontWeight: "500" }}>
+                  <Text style={{ color: "#003C43", fontSize: 20, fontWeight: "500" }}>
                     {ReadMore ? "Read Less" : " Read More"}
                   </Text>
                 </Pressable>
@@ -111,7 +111,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
                   style={{
                     textAlign: "center",
                     fontFamily: "outfit-medium",
-                    color: "#b891c8",
+                    color: "#135D66",
                     fontSize: 18,
                   }}
                 >
@@ -119,7 +119,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.Bookbtn}
-onPress={()=>setShowModel(true)}              >
+                onPress={() => setShowModel(true)}              >
                 <Text
                   style={{
                     textAlign: "center",
@@ -133,8 +133,8 @@ onPress={()=>setShowModel(true)}              >
               animationType='slide'
               visible={showModal}
             >
-              <BokkingModal 
-              hideModel={()=>setShowModel(false)}/>
+              <BokkingModal
+                hideModel={() => setShowModel(false)} />
 
             </Modal>
           </View>
@@ -177,9 +177,9 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   Category: {
-    color: "#b891c8",
+    color: "#003C43",
     fontSize: 20,
-    backgroundColor: "#f7d9fe",
+    backgroundColor: "#77B0AA",
     padding: 5,
     borderRadius: 8,
     fontSize: 14,
@@ -189,15 +189,15 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderWidth: 1,
     borderRadius: 99,
-    borderColor: "#b891c8",
+    borderColor: "#135D66",
     flex: 1
   },
   Bookbtn: {
     padding: 15,
-    backgroundColor: "#b891c8",
+    backgroundColor: "#135D66",
     borderWidth: 1,
     borderRadius: 99,
-    borderColor: "#b891c8",
+    borderColor: "#135D66",
     flex: 1
   }
 });

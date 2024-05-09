@@ -68,10 +68,10 @@ export default function BokkingModal({ hideModel }) {
             onDateChange={setSelectedDate}
             width={340}
             minDate={Date.now()}
-            todayBackgroundColor='black'
+            todayBackgroundColor='#003C43'
             todayTextStyle={{ color: 'white' }}
-            selectedDayColor='blue'
-            selectedDayTextColor='white'
+            selectedDayColor='#E3FEF7'
+            selectedDayTextColor='black'
           />
         </View>
         {/* time select section */}
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     marginBottom: '30px',
   },
   calender: {
-    backgroundColor: "rgb(147, 147, 235)",
+    backgroundColor: "#77B0AA",
     padding: 20,
     borderRadius: 15,
     marginLeft: 10,
@@ -145,19 +145,19 @@ const styles = StyleSheet.create({
   unselectedtime: {
     padding: 10,
     borderWidth: 1,
-    borderColor: 'blue',
+    borderColor: '#003C43',
     borderRadius: 99,
     paddingHorizontal: 18,
-    color: 'blue'
+    color: '#003C43'
   },
   selectedtime: {
     padding: 10,
     borderWidth: 1,
-    borderColor: 'blue',
+    borderColor: '#003C43',
     borderRadius: 99,
     paddingHorizontal: 18,
     color: 'white',
-    backgroundColor: 'blue'
+    backgroundColor: '#135D66'
   },
   textarea: {
     margin: 8,
@@ -167,11 +167,11 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     textAlignVertical: 'top',
     fontSize: 16,
-    borderColor: 'blue'
+    borderColor: '#003C43'
   },
   confirmbtn: {
     textAlign: 'center',
-    backgroundColor: 'blue',
+    backgroundColor: '#003C43',
     color: 'white',
     fontSize: 17,
     padding: 13,
