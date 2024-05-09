@@ -96,7 +96,6 @@ const Reviews = ({ serviceId }) => {
 };
 const styles = StyleSheet.create({
   container: {
-
     width: '90%',
     marginLeft: '5%',
     padding: 10,
@@ -104,10 +103,6 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderRadius:5,
     backgroundColor:"#003c43"
-    
-    
-
-
   },
   title: {
     fontSize: 18,
@@ -119,15 +114,11 @@ const styles = StyleSheet.create({
   commentsContainer: {
     backgroundColor: 'linear-gradient(to bottom, #0074D9, #00AEEF)',
     padding: 16,
-
   },
   commentText: {
     fontSize: 18,
     color: 'black',
     width: 90,
-    
-
-
   },
   inputContainer: {
     flexDirection: 'row',
@@ -141,6 +132,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     backgroundColor: 'white',
+    padding:6
   },
   sendButton: {
     backgroundColor: '#77b0aa',
@@ -161,7 +153,6 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 20, // Make it circular
     marginRight: 8,
-   
   },
   commentUser: {
     fontSize: 16,
