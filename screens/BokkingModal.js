@@ -11,12 +11,13 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import CalendarPicker from 'react-native-calendar-picker';
 import { useEffect, useState } from 'react';
+// import {useAuth}from'../firebase/auth'
 export default function BokkingModal({ hideModel }) {
   const [timeList, setTimeList] = useState();
   const [seletedTime, setSelectedTime] = useState();
   const [seletedDate, setSelectedDate] = useState();
   const [note, setNote] = useState();
-
+// const {user}=useAuth()
   useEffect(() => {
     getTime();
   }, [])
@@ -41,6 +42,8 @@ export default function BokkingModal({ hideModel }) {
     setTimeList(timeList);
   }
   // create booking method
+  const booking=()=>{
+  }
   return (
     <ScrollView>
       <KeyboardAvoidingView >

@@ -11,12 +11,12 @@ export default function StartPage() {
             />
             <View style={styles.subContainer}>
                 <Text style={{ fontSize: 27, color: '#ffff', textAlign: 'center' }}>
-                    Let's Find
+                    Let's Find 
                     <Text style={{ fontWeight: 'bold' }}> Professinal Cleaning and repair </Text>Service
                 </Text>
                 <Text style={{ fontSize: 15, color: '#ffff', textAlign: 'center', marginTop: 20 }}>Best App to find services near you which deliver you a professinal services</Text>
                 <Pressable style={styles.button} onPress={()=>router.push('/SignIn')}>
-                    <Text style={{ textAlign: 'center', color: '#8E3FFF', fontSize: 15 }}>Let's Get Started</Text>
+                    <Text style={{ textAlign: 'center', color: '#135D66', fontSize: 15 }}>Let's Get Started</Text>
                 </Pressable>
             </View>
         </View>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     },
     subContainer: {
         width: '100%',
-        backgroundColor: '#8E3FFF',
+        backgroundColor: '77B0AA#',
         height: '70%',
         marginTop: -20,
         borderTopLeftRadius: 30,
