@@ -8,23 +8,28 @@ import {
   ScrollView,
   ActivityIndicator,
   SafeAreaView,
-  Modal
+  Modal,
+  Linking
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
-import { Entypo } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
 import Reviews from "./Reviews";
 import BokkingModal from "./BokkingModal";
+import { useAuth } from "../firebase/auth";
 
 export default function BusinessDetailScreen({ name, id, image }) {
   const [ReadMore, setReadMore] = useState(false);
   const [showModal, setShowModel] = useState(false);
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
+  const { user } = useAuth();
+  const onMessageButtonClick=()=>{
+    Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
+  }
   const getOne = async () => {
     const docRef = doc(db, `BusinessListByCategory`, id);
 
@@ -39,6 +44,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
   useEffect(() => {
     getOne();
   }, [])
+
 
   if (loading) {
     return (
@@ -106,7 +112,9 @@ export default function BusinessDetailScreen({ name, id, image }) {
             <Reviews serviceId={id} />
             <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
 
-              <TouchableOpacity style={styles.messagebtn}>
+              <TouchableOpacity style={styles.messagebtn}
+              // onPress={onMessageButtonClick()}
+              >
                 <Text
                   style={{
                     textAlign: "center",
