@@ -11,6 +11,8 @@ import {
   Modal,
   Linking
 } from "react-native";
+
+import BokkingModal from "./BokkingModal";
 import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
@@ -27,6 +29,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
+  const [showModal, setShowModel] = useState(false);
 
   const onMessageButtonClick=()=>{
     Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
@@ -129,7 +132,10 @@ export default function BusinessDetailScreen({ name, id, image }) {
               Message
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.Bookbtn}>
+          <TouchableOpacity 
+          style={styles.Bookbtn}
+          onPress={() => setShowModel(true)}
+          >
             <Text
               style={{
                 textAlign: "center",
@@ -142,7 +148,16 @@ export default function BusinessDetailScreen({ name, id, image }) {
             </Text>
           </TouchableOpacity>
         </View>
-
+        <Modal
+              animationType='slide'
+              visible={showModal}
+            >
+           <BokkingModal
+                hideModel={() => setShowModel(false)} 
+                 serviceId={id}
+                  serviceName={name}
+                   serviceImage={image}/>
+            </Modal>
       </View>
       </ScrollView>
       </SafeAreaView>
