@@ -49,7 +49,7 @@ export default function SignUp() {
                 }}>
                     {/*signIn Image  */}
                     <View style={styles.imageContainer}>
-                        <Image style={{ height: hp(25) }} resizeMode='contain' source={require('../assets/images/download-removebg-preview.png')} />
+                        <Image style={{ height: hp(25) }} resizeMode='contain' source={require('../assets/images/signup.png')} />
                     </View>
 
                     {/* Text SignIn */}
@@ -96,7 +96,7 @@ export default function SignUp() {
                     <View style={{ flexDirection: 'row', justifyContent: "center" }}>
                         <Text style={styles.textForget}>Already have an account?</Text>
                         <Pressable onPress={() => router.push('/SignIn')}>
-                            <Text style={{ color: '#8E3FFF', fontWeight: 'bold' }}> Sign In</Text>
+                            <Text style={{ color: '#135D66', fontWeight: 'bold' }}> Sign In</Text>
                         </Pressable>
                     </View>
                 </View>
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     button: {
         height: 47,
         borderRadius: 10,
-        backgroundColor: '#8E3FFF',
+        backgroundColor: '#135D66',
         alignItems: 'center',
         justifyContent: 'center'
 

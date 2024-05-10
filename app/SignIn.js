@@ -89,7 +89,7 @@ export default function SignIn() {
                     <View style={{ flexDirection: 'row', justifyContent: "center" }}>
                         <Text style={styles.textForget}>Don't have an account ?</Text>
                         <Pressable onPress={() => router.push('/SignUp')}>
-                            <Text style={{ color: '#8E3FFF', fontWeight: 'bold' }}>Sign Up</Text>
+                            <Text style={{ color: '#135D66', fontWeight: 'bold' }}>Sign Up</Text>
                         </Pressable>
                     </View>
                 </View>
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     button: {
         height: 47,
         borderRadius: 10,
-        backgroundColor: '#8E3FFF',
+        backgroundColor: '#135D66',
         alignItems: 'center',
         justifyContent: 'center'
 
