@@ -13,45 +13,74 @@ import CalendarPicker from 'react-native-calendar-picker';
 import { db } from '../FirebaseConfig';
 import { addDoc, collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import {useAuth}from'../firebase/auth'
-export default function BokkingModal({ hideModel , serviceId ,serviceName ,serviceImage}) {
+import { useAuth } from '../firebase/auth'
+export default function BokkingModal({ hideModel, serviceId, serviceName, serviceImage, serviceAddress ,servicePerson}) {
   const [timeList, setTimeList] = useState();
   const [seletedTime, setSelectedTime] = useState();
   const [seletedDate, setSelectedDate] = useState();
   const [note, setNote] = useState();
-  
 
-  const {user}=useAuth()
+
+  const { user } = useAuth()
   useEffect(() => {
-  getTime();  
+    getTime();
   }, []);
-
 
   const addBooking = async () => {
     if (seletedDate && seletedTime && user) {
       try {
         const timestamp = seletedDate.getTime();
+        const formattedDate = seletedDate.toLocaleDateString('en-GB'); // Format as day-month-year
+
         await addDoc(collection(db, 'book'), {
-          time: seletedTime ,
-          date: timestamp ,
+          time: seletedTime,
+          date: formattedDate,
           businessName: serviceName,
           businessId: serviceId,
-          businessImage : serviceImage,
+          businessImage: serviceImage,
           username: user?.username,
           userEmail: user?.email,
-        
+          businessAddress: serviceAddress,
+          businessPerson :servicePerson
         });
-  
+
         setSelectedTime('');
         setSelectedDate(null);
         setNote('');
+        console.log('The service is confirmed to be booked');
       } catch (error) {
         console.error('Error adding Booking:', error);
       }
     }
   };
-  
-  
+
+  // const addBooking = async () => {
+  //   if (seletedDate && seletedTime && user) {
+  //     try {
+  //       const timestamp = seletedDate.getTime();
+  //       await addDoc(collection(db, 'book'), {
+  //         time: seletedTime ,
+  //         date: seletedDate ,
+  //         businessName: serviceName,
+  //         businessId: serviceId,
+  //         businessImage : serviceImage,
+  //         username: user?.username,
+  //         userEmail: user?.email,
+
+  //       });
+
+  //       setSelectedTime('');
+  //       setSelectedDate(null);
+  //       setNote('');
+  //       console.log('the service is confirmed to be booked')
+
+  //     } catch (error) {
+  //       console.error('Error adding Booking:', error);
+  //     }
+  //   }
+  // };
+
+
 
   const getTime = () => {
     const timeList = [];
@@ -73,7 +102,7 @@ export default function BokkingModal({ hideModel , serviceId ,serviceName ,servi
     }
     setTimeList(timeList);
   }
- 
+
   return (
     <ScrollView>
       <KeyboardAvoidingView >

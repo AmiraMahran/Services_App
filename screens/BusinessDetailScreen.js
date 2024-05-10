@@ -24,17 +24,26 @@ import Reviews from "./Reviews";
 import { useAuth } from "../firebase/auth";
 
 
-export default function BusinessDetailScreen({ name, id, image }) {
+export default function BusinessDetailScreen({ name, id, image,adress,contactPerson }) {
   const [ReadMore, setReadMore] = useState(false);
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
   const [showModal, setShowModel] = useState(false);
 
-  const onMessageButtonClick=()=>{
-    Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
-  }
-
+  // const onMessageButtonClick=()=>{
+  //   Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
+  // }
+  const onMessageButtonClick = () => {
+    const emailSubject = 'I am looking for your service';
+    const emailBody = 'Hi there,';
+  
+    // Construct the mailto URL
+    const mailtoUrl = `mailto:${user?.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+  
+    // Open the user's email client
+    Linking.openURL(mailtoUrl);
+  };
   const getOne = async () => {
     const docRef = doc(db, `BusinessListByCategory`, id );
 
@@ -156,7 +165,10 @@ export default function BusinessDetailScreen({ name, id, image }) {
                 hideModel={() => setShowModel(false)} 
                  serviceId={id}
                   serviceName={name}
-                   serviceImage={image}/>
+                   serviceImage={image}
+                   serviceAddress ={adress}
+                   servicePerson={contactPerson}
+                   />
             </Modal>
       </View>
       </ScrollView>
