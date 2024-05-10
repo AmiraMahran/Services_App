@@ -16,7 +16,7 @@ export default function StartPage() {
                 </Text>
                 <Text style={{ fontSize: 15, color: '#ffff', textAlign: 'center', marginTop: 20 }}>Best App to find services near you which deliver you a professinal services</Text>
                 <Pressable style={styles.button} onPress={()=>router.push('/SignIn')}>
-                    <Text style={{ textAlign: 'center', color: '#8E3FFF', fontSize: 15 }}>Let's Get Started</Text>
+                    <Text style={{ textAlign: 'center', color: '#003C43', fontSize: 15 }}>Let's Get Started</Text>
                 </Pressable>
             </View>
         </View>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     },
     subContainer: {
         width: '100%',
-        backgroundColor: '#8E3FFF',
+        backgroundColor: '#77B0AA',
         height: '70%',
         marginTop: -20,
         borderTopLeftRadius: 30,
@@ -48,5 +48,3 @@ const styles = StyleSheet.create({
         marginTop: 20,
     }
 })
-
-// #8E3FFF
