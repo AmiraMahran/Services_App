@@ -119,7 +119,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.Bookbtn}
-                onPress={() => setShowModel(true)}              >
+                onPress={() => setShowModel(true)}>
                 <Text
                   style={{
                     textAlign: "center",
@@ -135,7 +135,6 @@ export default function BusinessDetailScreen({ name, id, image }) {
             >
               <BokkingModal
                 hideModel={() => setShowModel(false)} />
-
             </Modal>
           </View>
         </ScrollView>
@@ -146,9 +145,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
       <ActivityIndicator size="large" />
     )
   }
-
 }
-
 const styles = StyleSheet.create({
   loginImage: {
     width: 230,
