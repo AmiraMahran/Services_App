@@ -78,6 +78,16 @@
         "about": "washing clothes steps:first we need to Prepare the Ironing Area so that it is flat surface.then sort the Laundry by Material so that Different fabrics need Different degree of heat , as the heat could be low / hight / meduim.check if the iron is ready & heated to start.after ironing the cloth it will be hanged in the closet"
     },
     {
+<<<<<<< HEAD
+        "id":"1007",
+        "name":"Ironing ",
+        "contactPerson":"Hannah Alexander",
+        "email":"Hannah@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/qCBrTxYCJ1kX.png?o=1",
+        "category":{
+            "id":"104",
+            "name":" Laundry"
+=======
         "id": "1007",
         "name": "Ironing ",
         "contactPerson": "Hannah Alexander",
@@ -86,6 +96,7 @@
         "category": {
             "id": "104",
             "name": " Laundry"
+>>>>>>> 6b4e8a896a549f0868da1c02e66cc4e5ab84a953
         },
         "adress": " 1934 Murry Street, Norfolk",
         "about": "iron the clothes steps:first we need to Prepare the Ironing Area so that it is flat surface.then sort the Laundry by Material so that Different fabrics need Different degree of heat , as the heat could be low / hight / meduim.check if the iron is ready & heated to start.after ironing the cloth it will be hanged in the closet"
