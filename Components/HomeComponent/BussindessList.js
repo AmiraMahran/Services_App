@@ -20,8 +20,8 @@ export default function BussindessList() {
     const collectionRef = collection(db, 'businessList'); // Use your actual collection name
 
     for (const item of jsonData) {
-      const docRef = doc(collectionRef); // automatically generate unique id
-      await setDoc(docRef, item);
+      const docRef = doc(collectionRef ,item.id); // automatically generate unique id
+      await setDoc(docRef ,item );
     }
   };
 

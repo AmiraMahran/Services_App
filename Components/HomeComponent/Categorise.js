@@ -21,7 +21,7 @@ export default function Categorise() {
     const collectionRef = collection(db, 'category');
 
     for (const item of jsonData) {
-      const docRef = doc(collectionRef);
+      const docRef = doc(collectionRef ,item.id);
       await setDoc(docRef, item);
     }
   };

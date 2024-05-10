@@ -85,7 +85,7 @@
         "image":"https://gcdnb.pbrd.co/images/qCBrTxYCJ1kX.png?o=1",
         "category":{
             "id":"104",
-    "name":" Laundry"
+            "name":" Laundry"
         },
         "adress":" 1934 Murry Street, Norfolk",
         "about":"iron the clothes steps:first we need to Prepare the Ironing Area so that it is flat surface.then sort the Laundry by Material so that Different fabrics need Different degree of heat , as the heat could be low / hight / meduim.check if the iron is ready & heated to start.after ironing the cloth it will be hanged in the closet"
@@ -207,5 +207,4 @@
         "adress":"  1150 Masonic Hill Road, Arkansas",
         "about":"edit"
     }
-   
 ]
