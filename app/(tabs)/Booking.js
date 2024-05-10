@@ -48,8 +48,17 @@ export default function Booking() {
             </View>
           )}
         />
+<View style={styles.obj}>
+
+</View>
+
       </View>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  obj:{
+    height:200,
+    
+  },
+})
