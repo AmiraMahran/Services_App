@@ -54,7 +54,7 @@ export default function BussindessList() {
   
   return (
     <View style={{ marginTop: 10 }}>
-      <Heading text={'Latest Business'} isViewAll={true} />
+      <Heading text={'Latest Services'} isViewAll={true} />
       <FlatList
         data={businessList}
 

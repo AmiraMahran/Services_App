@@ -49,7 +49,7 @@ export default function SignUp() {
                 }}>
                     {/*signIn Image  */}
                     <View style={styles.imageContainer}>
-                        <Image style={{ height: hp(25) }} resizeMode='contain' source={require('../assets/images/download-removebg-preview.png')} />
+                        <Image style={{ height: hp(25) }} resizeMode='contain' source={require('../assets/images/signup.png')} />
                     </View>
 
                     {/* Text SignIn */}
