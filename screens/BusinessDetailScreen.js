@@ -141,8 +141,11 @@ export default function BusinessDetailScreen({ name, id, image }) {
               animationType='slide'
               visible={showModal}
             >
-              <BokkingModal
-                hideModel={() => setShowModel(false)} />
+           <BokkingModal
+                hideModel={() => setShowModel(false)} 
+                 serviceId={id}
+                  serviceName={name}
+                   serviceImage={image}/>
             </Modal>
           </View>
         </ScrollView>

@@ -5,6 +5,7 @@ import Slider from '../../Components/HomeComponent/Slider'
 import Categorise from '../../Components/HomeComponent/Categorise'
 import BussindessList from '../../Components/HomeComponent/BussindessList'
 import BusinessListByCategoryScreen from '../BusinessListByCategoryScreen'
+import Footer from '../../Components/HomeComponent/Footer'
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
                         <Slider />
                         <Categorise />
                         <BussindessList />
+                        <Footer/>
                     </View>
                 </View>
             </SafeAreaView>

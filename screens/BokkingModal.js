@@ -10,17 +10,49 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import CalendarPicker from 'react-native-calendar-picker';
+import { db } from '../FirebaseConfig';
+import { addDoc, collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-// import {useAuth}from'../firebase/auth'
-export default function BokkingModal({ hideModel }) {
+import {useAuth}from'../firebase/auth'
+export default function BokkingModal({ hideModel , serviceId ,serviceName ,serviceImage}) {
   const [timeList, setTimeList] = useState();
   const [seletedTime, setSelectedTime] = useState();
   const [seletedDate, setSelectedDate] = useState();
   const [note, setNote] = useState();
-// const {user}=useAuth()
+  
+
+  const {user}=useAuth()
   useEffect(() => {
-    getTime();
-  }, [])
+  getTime();  
+  }, []);
+
+
+  const addBooking = async () => {
+    if (seletedDate && seletedTime && user) {
+      try {
+        const timestamp = seletedDate.getTime();
+        await addDoc(collection(db, 'book'), {
+          time: seletedTime ,
+          date: timestamp ,
+          businessName: serviceName,
+          businessId: serviceId,
+          businessImage : serviceImage,
+          username: user?.username,
+          userEmail: user?.email,
+        
+        });
+  
+        setSelectedTime('');
+        setSelectedDate(null);
+        setNote('');
+      } catch (error) {
+        console.error('Error adding Booking:', error);
+      }
+    }
+  };
+  
+  
+
   const getTime = () => {
     const timeList = [];
     for (let i = 8; i <= 12; i++) {
@@ -41,9 +73,7 @@ export default function BokkingModal({ hideModel }) {
     }
     setTimeList(timeList);
   }
-  // create booking method
-  const booking=()=>{
-  }
+ 
   return (
     <ScrollView>
       <KeyboardAvoidingView >
@@ -103,7 +133,7 @@ export default function BokkingModal({ hideModel }) {
           />
         </View>
         {/* confirmation button */}
-        <TouchableOpacity style={{ marginTop: 10 }}>
+        <TouchableOpacity onPress={addBooking} style={{ marginTop: 10 }}>
           <Text style={styles.confirmbtn}>confirm & Book</Text>
         </TouchableOpacity>
       </KeyboardAvoidingView>
