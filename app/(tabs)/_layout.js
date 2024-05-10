@@ -28,12 +28,13 @@ export default function TabsLayout() {
                     headerTitle: "Booking",
                     title: "Booking",
                     headerTitleAlign: "center",
+                    // color:'white',
                     tabBarIcon: ({ color }) => (
                         <Feather name="bookmark" size={24} color={color} />
                     ),
                     tabBarLabel: "Booking",
                     headerStyle: {
-                        backgroundColor: "lightblue",
+                        backgroundColor: "#135D66",
                     },
                 }}
             />

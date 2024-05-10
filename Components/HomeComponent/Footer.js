@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
         // borderBottomLeftRadius: 25,
         // borderBottomRightRadius: 25,
         borderRadius:20,
+        marginTop:25,
 
     },
     subcontainer1: {

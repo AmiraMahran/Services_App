@@ -7,7 +7,9 @@ import {
   Pressable,
   ScrollView,
   ActivityIndicator,
-  SafeAreaView
+  SafeAreaView,
+  Modal,
+  Linking
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
@@ -17,11 +19,19 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
 import Reviews from "./Reviews";
+import { useAuth } from "../firebase/auth";
+
 
 export default function BusinessDetailScreen({ name, id, image }) {
   const [ReadMore, setReadMore] = useState(false);
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
+  const { user } = useAuth();
+
+  const onMessageButtonClick=()=>{
+    Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
+  }
+
   const getOne = async () => {
     const docRef = doc(db, `BusinessListByCategory`, id );
 
@@ -62,13 +72,13 @@ export default function BusinessDetailScreen({ name, id, image }) {
               {item.name}
             </Text>
             <View style={styles.subContainer}>
-              <Text style={{ color: "#b891c8", fontSize: 20 }}>
+              <Text style={{ color: "#135D66", fontSize: 20 }}>
                 {item.contactPerson}
               </Text>
               <Text style={styles.Category}>{item.category.name}</Text>
             </View>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <MaterialIcons name="location-pin" size={30} color="purple" />
+              <MaterialIcons name="location-pin" size={30} color="#135D66" />
               <Text style={{ fontSize: 20, color: "gray" }}>
                 {item.adress}
               </Text>
@@ -91,7 +101,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
               {item.about}
             </Text>
             <Pressable onPress={() => setReadMore(!ReadMore)}>
-              <Text style={{ color: "#b891c8", fontSize: 20, fontWeight: "500" }}>
+              <Text style={{ color: "#135D66", fontSize: 20, fontWeight: "500" }}>
                 {ReadMore ? "Read Less" : " Read More"}
               </Text>
             </Pressable>
@@ -103,12 +113,16 @@ export default function BusinessDetailScreen({ name, id, image }) {
         <Reviews serviceId={id} />
         <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
 
-          <TouchableOpacity style={styles.messagebtn}>
+          <TouchableOpacity
+           style={styles.messagebtn}
+          //  onPress={onMessageButtonClick()}
+          // onPress={Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' )}
+           >
             <Text
               style={{
                 textAlign: "center",
                 fontFamily: "outfit-medium",
-                color: "#b891c8",
+                color: "#135D66",
                 fontSize: 18,
               }}
             >
@@ -169,9 +183,9 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   Category: {
-    color: "#b891c8",
+    color: "#E3FEF7",
     fontSize: 20,
-    backgroundColor: "#f7d9fe",
+    backgroundColor: "#135D66",
     padding: 5,
     borderRadius: 8,
     fontSize: 14,
@@ -181,15 +195,15 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderWidth: 1,
     borderRadius: 99,
-    borderColor: "#b891c8",
+    borderColor: "#135D66",
     flex: 1
   },
   Bookbtn: {
     padding: 15,
-    backgroundColor: "#b891c8",
+    backgroundColor: "#135D66",
     borderWidth: 1,
     borderRadius: 99,
-    borderColor: "#b891c8",
+    borderColor: "#135D66",
     flex: 1
   }
 });

@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 10,
+    marginBottom:10
   },
   inputField: {
     flex: 1,
@@ -141,6 +142,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     backgroundColor: 'white',
+    padding:7,
   },
   sendButton: {
     backgroundColor: '#77b0aa',
