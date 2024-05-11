@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { StyleSheet, Text, View, FlatList, Image, ScrollView } from 'react-native'
 =======
 <<<<<<< HEAD
@@ -58,6 +59,8 @@ export default function Booking() {
 
       </View>
 =======
+=======
+>>>>>>> 1fbab7b0898587c10a91845c7fe1f04e274a40ce
 import { StyleSheet, Text, View, FlatList, Image } from 'react-native'
 >>>>>>> 1f8e7fa947ed7c01bf397a0652b5388038c3f982
 import React, { useState, useEffect } from 'react'
@@ -161,20 +164,17 @@ export default function Booking() {
 
         </View>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </ScrollView>
 =======
 >>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
 >>>>>>> 1f8e7fa947ed7c01bf397a0652b5388038c3f982
+=======
+>>>>>>> 1fbab7b0898587c10a91845c7fe1f04e274a40ce
     )
 }
 
 const styles = StyleSheet.create({
-<<<<<<< HEAD
-  obj:{
-    height:200,
-    
-  },
-=======
     container: {
         flex: 1,
         backgroundColor: '#77B0AA',
@@ -185,5 +185,4 @@ const styles = StyleSheet.create({
     iconContainer: {
         flex: 1
     },
->>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
 })
