@@ -44,7 +44,7 @@ export default function BusinessListByCategoryScreen() {
   }, []);
   return (
     <View style={{ padding: 20, paddingTop: 40, backgroundColor: '#DDDDDD', height: '100%' }}>
-            <PageHeading title={param.category}/>
+            <PageHeading title={name}/>
       <FlatList data={List} style={{ marginTop: 15 }} renderItem={({ item }) => <BusinessListItem all={item} />} />
     </View>
   )

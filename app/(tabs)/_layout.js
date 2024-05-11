@@ -12,10 +12,11 @@ export default function TabsLayout() {
                     headerShown: false,
                     title: "Home",
                     headerTitleAlign: "center",
-                    tabBarIcon: ({color}) => (
+                    tabBarIcon: ({ color = '#003c43' }) => (
                         <Feather name="home" size={24} color={color} />
                     ),
                     tabBarLabel: "Home",
+                    tabBarActiveTintColor: "#003C43",
                     headerStyle: {
                         backgroundColor: "lightblue",
                     },
@@ -26,13 +27,15 @@ export default function TabsLayout() {
                 name="Booking"
                 options={{
                     headerTitle: "Booking",
+                    headerTitleStyle:{color:'white'},
                     title: "Booking",
                     headerTitleAlign: "center",
                     // color:'white',
-                    tabBarIcon: ({ color }) => (
+                    tabBarIcon: ({ color = '#003c43' }) => (
                         <Feather name="bookmark" size={24} color={color} />
                     ),
                     tabBarLabel: "Booking",
+                    tabBarActiveTintColor: "#003C43",
                     headerStyle: {
                         backgroundColor: "#135D66",
                     },
@@ -45,10 +48,11 @@ export default function TabsLayout() {
                     headerShown: false,
                     title: "ProfilePage",
                     headerTitleAlign: "center",
-                    tabBarIcon: ({ color }) => (
+                    tabBarIcon: ({ color = '#003c43' }) => (
                         <Feather name="user" size={24} color={color} />
                     ),
                     tabBarLabel: "User",
+                    tabBarActiveTintColor: "#003C43",
                     headerStyle: {
                         backgroundColor: "lightblue",
                     },

@@ -14,7 +14,7 @@ import { db } from '../FirebaseConfig';
 import { addDoc, collection, onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useAuth } from '../firebase/auth'
-export default function BokkingModal({ hideModel, serviceId, serviceName, serviceImage, serviceAddress ,servicePerson}) {
+export default function BokkingModal({ hideModel, serviceId, serviceName, serviceImage, serviceAddress, servicePerson }) {
   const [timeList, setTimeList] = useState();
   const [seletedTime, setSelectedTime] = useState();
   const [seletedDate, setSelectedDate] = useState();

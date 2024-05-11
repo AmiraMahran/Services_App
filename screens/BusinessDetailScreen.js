@@ -166,8 +166,8 @@ export default function BusinessDetailScreen({ name, id, image, adress, contactP
                 serviceId={id}
                 serviceName={name}
                 serviceImage={image}
-                serviceAddress={adress}
-                servicePerson={contactPerson}
+                serviceAddress={item.adress}
+                servicePerson={item.contactPerson}
               />
             </Modal>
           </View>

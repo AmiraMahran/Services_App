@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity ,ScrollView} from "react-native";
 import React from "react";
 import { MaterialIcons } from '@expo/vector-icons';
 import { router } from "expo-router";
@@ -12,6 +12,8 @@ export default function BusinessListItem({ all }) {
   }
   
   return (
+    <ScrollView>
+
     <TouchableOpacity style={styles.container} onPress={fun}>
       <Image source={{ uri: all.image }} style={styles.image} />
       <View style={styles.suncontainer}>
@@ -37,6 +39,7 @@ export default function BusinessListItem({ all }) {
         </View>
       </View>
     </TouchableOpacity>
+    </ScrollView>
   );
 }
 
