@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, setDoc, doc } from 'firebase/firestore';
 import { db } from '../../FirebaseConfig';
 import Heading from './Heading';
-import data from './Data/CategoriseData.json'
+import data from './Data/categoriseData.json'
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import BusinessListByCategoryScreen from '../../app/BusinessListByCategoryScreen';
 import { router } from 'expo-router';

@@ -64,115 +64,115 @@ export default function BusinessDetailScreen({ name, id, image, adress, contactP
     return (
       <ScrollView>
 
-      <SafeAreaView>
-        <ScrollView>
-          <View style={styles.Container}>
-            <ScrollView >
-              <TouchableOpacity
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: 10,
-                  alignItems: "center",
-                  marginTop: 40,
-                  marginLeft: 10,
-                }}
-                onPress={() => router.back()}
-              >
-                <Ionicons name="arrow-back-outline" size={30} color="black" />
-              </TouchableOpacity>
-              <Image source={{ uri: image }} style={{ width: "100%", height: 300 }} />
-              <View style={styles.infoContainer}>
-                <Text style={{ fontFamily: "outfit-bold", fontSize: 25 }}>
-                  {item.name}
-                </Text>
-                <View style={styles.subContainer}>
-                  <Text style={{ color: "#135D66", fontSize: 20 }}>
-                    {item.contactPerson}
-                  </Text>
-                  <Text style={styles.Category}>{item.category.name}</Text>
-                </View>
-                <View style={{ display: "flex", flexDirection: "row" }}>
-                  <MaterialIcons name="location-pin" size={30} color="#135D66" />
-                  <Text style={{ fontSize: 20, color: "gray" }}>
-                    {item.adress}
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
-              >
-                <Text style={{ paddingHorizontal: 4 }}> About Me </Text>
-                <Text
+        <SafeAreaView>
+          <ScrollView>
+            <View style={styles.Container}>
+              <ScrollView >
+                <TouchableOpacity
                   style={{
-                    fontFamily: "out-fit",
-                    color: "gray",
-                    lineHeight: 28,
-                    fontSize: 16,
-                    marginHorizontal: 12
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: 10,
+                    alignItems: "center",
+                    marginTop: 40,
+                    marginLeft: 10,
                   }}
-                  numberOfLines={ReadMore ? 20 : 5}
+                  onPress={() => router.back()}
                 >
-                  {item.about}
-                </Text>
-                <Pressable onPress={() => setReadMore(!ReadMore)}>
-                  <Text style={{ color: "#135D66", fontSize: 20, fontWeight: "500" }}>
-                    {ReadMore ? "Read Less" : " Read More"}
+                  <Ionicons name="arrow-back-outline" size={30} color="black" />
+                </TouchableOpacity>
+                <Image source={{ uri: image }} style={{ width: "100%", height: 300 }} />
+                <View style={styles.infoContainer}>
+                  <Text style={{ fontFamily: "outfit-bold", fontSize: 25 }}>
+                    {item.name}
                   </Text>
-                </Pressable>
-              </View>
-            </ScrollView>
-            <Reviews serviceId={id} />
-            <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
+                  <View style={styles.subContainer}>
+                    <Text style={{ color: "#135D66", fontSize: 20 }}>
+                      {item.contactPerson}
+                    </Text>
+                    <Text style={styles.Category}>{item.category.name}</Text>
+                  </View>
+                  <View style={{ display: "flex", flexDirection: "row" }}>
+                    <MaterialIcons name="location-pin" size={30} color="#135D66" />
+                    <Text style={{ fontSize: 20, color: "gray" }}>
+                      {item.adress}
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
+                >
+                  <Text style={{ paddingHorizontal: 4 }}> About Me </Text>
+                  <Text
+                    style={{
+                      fontFamily: "out-fit",
+                      color: "gray",
+                      lineHeight: 28,
+                      fontSize: 16,
+                      marginHorizontal: 12
+                    }}
+                    numberOfLines={ReadMore ? 20 : 5}
+                  >
+                    {item.about}
+                  </Text>
+                  <Pressable onPress={() => setReadMore(!ReadMore)}>
+                    <Text style={{ color: "#135D66", fontSize: 20, fontWeight: "500" }}>
+                      {ReadMore ? "Read Less" : " Read More"}
+                    </Text>
+                  </Pressable>
+                </View>
+              </ScrollView>
+              <Reviews serviceId={id} />
+              <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
 
-              <TouchableOpacity
-                style={styles.messagebtn}
-              //  onPress={onMessageButtonClick()}
-              // onPress={Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' )}
-              >
-                <Text
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "outfit-medium",
-                    color: "#135D66",
-                    fontSize: 18,
-                  }}
+                <TouchableOpacity
+                  style={styles.messagebtn}
+                //  onPress={onMessageButtonClick()}
+                // onPress={Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' )}
                 >
-                  Message
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.Bookbtn}
-                onPress={() => setShowModel(true)}
-              >
-                <Text
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "outfit-medium",
-                    color: "white",
-                    fontSize: 18,
-                  }}
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      fontFamily: "outfit-medium",
+                      color: "#135D66",
+                      fontSize: 18,
+                    }}
+                  >
+                    Message
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.Bookbtn}
+                  onPress={() => setShowModel(true)}
                 >
-                  Book Now
-                </Text>
-              </TouchableOpacity>
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      fontFamily: "outfit-medium",
+                      color: "white",
+                      fontSize: 18,
+                    }}
+                  >
+                    Book Now
+                  </Text>
+                </TouchableOpacity>
+              </View>
+              <Modal
+                animationType='slide'
+                visible={showModal}
+              >
+                <BokkingModal
+                  hideModel={() => setShowModel(false)}
+                  serviceId={id}
+                  serviceName={name}
+                  serviceImage={image}
+                  serviceAddress={adress}
+                  servicePerson={contactPerson}
+                />
+              </Modal>
             </View>
-            <Modal
-              animationType='slide'
-              visible={showModal}
-            >
-              <BokkingModal
-                hideModel={() => setShowModel(false)}
-                serviceId={id}
-                serviceName={name}
-                serviceImage={image}
-                serviceAddress={adress}
-                servicePerson={contactPerson}
-              />
-            </Modal>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+          </ScrollView>
+        </SafeAreaView>
       </ScrollView>
     );
   } else {
