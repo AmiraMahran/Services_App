@@ -1,4 +1,4 @@
-import { FlatList, Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useAuth } from '../../firebase/auth';
 import { Ionicons } from '@expo/vector-icons'
@@ -39,6 +39,8 @@ export default function ProfilePage() {
     }
     ]
     return (
+        <ScrollView>
+
         <View>
 
             <View style={{ padding: 20, paddingTop: 30, backgroundColor: "#003C43" }}>
@@ -70,6 +72,7 @@ export default function ProfilePage() {
                 />
             </View>
         </View>
+        </ScrollView>
     )
 }
 

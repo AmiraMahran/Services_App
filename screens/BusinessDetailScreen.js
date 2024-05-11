@@ -61,6 +61,8 @@ export default function BusinessDetailScreen({ name, id, image,adress,contactPer
 
   if (loading) {
     return (
+      <ScrollView>
+
       <SafeAreaView>
       <ScrollView>
       <View style={styles.Container}>
@@ -173,6 +175,7 @@ export default function BusinessDetailScreen({ name, id, image,adress,contactPer
       </View>
       </ScrollView>
       </SafeAreaView>
+      </ScrollView>
     );
   } else {
     return (

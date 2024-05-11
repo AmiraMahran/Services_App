@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList, Image } from 'react-native'
+import { StyleSheet, Text, View, FlatList, Image, ScrollView } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { PageHeading } from '../../Components/HomeComponent/PageHeading'
 import { useAuth } from '../../firebase/auth';
@@ -31,6 +31,8 @@ export default function Booking() {
         }
     };
     return (
+        <ScrollView>
+
         <View style={{ marginTop: 10 }} >
 
             <FlatList
@@ -97,6 +99,7 @@ export default function Booking() {
             </View>
 
         </View>
+        </ScrollView>
     )
 }
 
