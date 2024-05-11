@@ -9,7 +9,11 @@
             "id": "101",
             "name": " Wash car"
         },
+<<<<<<< HEAD
         "adress": "3641 Douglas Dairy Road, Virginia",
+=======
+        "adress":"3641 Douglas Dairy Road, Virginia",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "cleaning the exterior of your car steps be like: Parking Your Car in the Shade: Move your car out of direct sunlight as we need tp prevent water spots from drying on the paint. Picking the Right Soap: we don’t use the liquid soap from houses as they have ingredients that is harmful for your car. so, we get a specially formulated car washing soap from your local auto parts store.  Using the Best Cloth:we use a microfiber cloth instead of a sponge or old t-shirt. The other materials may not pick up everything we’re trying to remove from the vehicle surface. Using the Two Bucket Method: we used to fill one bucket with water and another with water mixed with car detergent. This helps prevent transferring dirt while washing. Starting the Actual Washing Process: we dip a microfiber cloth in the soapy water and scrub the surface of your car using up-and-down motions. Rinsing Soup: we give your car more than one rinse till remaining soap is removed. Drying Your Car: we use a clean microfiber cloth to dry your car thoroughly, preventing water spots. Adding Protectant: Consider applying wax or a protective sealant to enhance shine and protect the paint."
     },
     {
@@ -22,7 +26,11 @@
             "id": "101",
             "name": " Wash car"
         },
+<<<<<<< HEAD
         "adress": "3109 Duffy Street, Indiana",
+=======
+        "adress":"3109 Duffy Street, Indiana",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "cleaning the interior of your car steps be like:Removing all trash from your carTaking out your floor mats. we shake them off to remove loose dirt and debris, then wash your floor mats with water and cleaner. we clean floor mats make a big difference in the overall appearance of your car’s interior.Vacuuming Interior: we use a vacuum with attachments to clean the entire interior. Paying attention to the seats, floor, and corners.Take Care of Seats: Depending on the material (fabric, leather, or vinyl),we use an appropriate cleaner.wiping Interior Windows: we use a glass cleaner to clean the windows from the inside. The final touch will improve the visibility while driving.Deodorization: End up removing unpleasant odors from your car. we can use air freshener on floor mats, leave for a while."
     },
     {
@@ -35,6 +43,7 @@
             "id": "102",
             "name": " cleaning"
         },
+<<<<<<< HEAD
         "adress": "1738 Atha Drive, California",
         "about": "cleaning an office steps be like:Organize Loose Papers: Use filing cabinets to store invoices, work orders, estimates, vendor information, product specs, and customer profiles. && Label files appropriately and file documents regular. &&sort them alphabetically and mark them with colored tabs. Disinfect Restrooms: clean the toilet with disinfecting cleaner and a toilet brush. && Wipe down toilet seats, lids, tank exteriors, and sink areas with disinfectant. &&Refill soap dispensers, paper towel holders, and replace toilet tissue rolls. Protect Electronics: Blast dust out of tight spaces (keyboard keys, vents, fans) using a duster. && Wipe electronics (screens, keyboards) with a soft rag moistened with disinfectant spray.Clean the Break Room: Keep the refrigerator clean and organized. && Dispose of old food weekly and wipe down the interior with a disinfectant-dampened rag.&& Spray countertops, sinks, tables, chairs, and shelves with disinfectant spray."
     },
@@ -49,6 +58,22 @@
             "name": " cleaning"
         },
         "adress": "3878 Aaron Smith Drive, Pennsylvania",
+=======
+        "adress":"1738 Atha Drive, California",
+        "about": "cleaning an office steps be like:Organize Loose Papers: Use filing cabinets to store invoices, work orders, estimates, vendor information, product specs, and customer profiles. && Label files appropriately and file documents regular. &&sort them alphabetically and mark them with colored tabs. Disinfect Restrooms: clean the toilet with disinfecting cleaner and a toilet brush. && Wipe down toilet seats, lids, tank exteriors, and sink areas with disinfectant. &&Refill soap dispensers, paper towel holders, and replace toilet tissue rolls. Protect Electronics: Blast dust out of tight spaces (keyboard keys, vents, fans) using a duster. && Wipe electronics (screens, keyboards) with a soft rag moistened with disinfectant spray.Clean the Break Room: Keep the refrigerator clean and organized. && Dispose of old food weekly and wipe down the interior with a disinfectant-dampened rag.&& Spray countertops, sinks, tables, chairs, and shelves with disinfectant spray."
+    },
+    {
+        "id":"1004",
+        "name":"Cleaning Room",
+        "contactPerson":"Emma Michael",
+        "email":"Emma123@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/FCkZDEvFHIZz.png?o=1",
+        "category":{
+            "id":"102",
+            "name":" cleaning"
+        },
+        "adress":"3878 Aaron Smith Drive, Pennsylvania",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "cleaning an room steps be like:Make the Bed: Clear everything off the bed.&& Pull up the sheets and blankets, tuck them in, straighten the comforter, and place the pillows neatly.&&If the sheets haven’t been changed recently, consider swapping them out for fresh ones.Organize Clothes on the Floor: Pick up each piece of clothing.Determine if it’s dirty or clean. When in doubt, treat it as dirty. && Fold clean clothes and put them away in the dresser or hang them up.Place dirty clothes in the laundry basket.Take Dirty Dishes to the Kitchen: Collect cups, plates, cutlery, and mugs.Organizing the Items in the Room: Return Objects to Their Rightful Places let the sunlight enter the room with some fresh air."
     },
     {
@@ -74,7 +99,11 @@
             "id": "104",
             "name": " Laundry"
         },
+<<<<<<< HEAD
         "adress": " 1500 Birch Street, Kentucky",
+=======
+        "adress":" 1500 Birch Street, Kentucky",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "washing clothes steps:first we need to Prepare the Ironing Area so that it is flat surface.then sort the Laundry by Material so that Different fabrics need Different degree of heat , as the heat could be low / hight / meduim.check if the iron is ready & heated to start.after ironing the cloth it will be hanged in the closet"
     },
     {
@@ -137,7 +166,11 @@
             "id": "106",
             "name": "Repair"
         },
+<<<<<<< HEAD
         "adress": " 1150 Masonic Hill Road, Arkansas",
+=======
+        "adress":" 1150 Masonic Hill Road, Arkansas",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "Some issues could happened and we have the solution for it so here you are some details. Leaky Faucet Repair: Issue: A dripping faucet can waste water and increase the utility bills.Steps:Turn off the water supply to the faucet. Disassemble the faucet handle to access the cartridge or valve.Replace worn-out washers, O-rings, or the entire cartridge.Reassemble the faucet and turn the water supply back on.Clogged Drain Clearing: Issue: Slow-draining sinks or tubs can be frustrating. Steps: Remove the drain stopper or cover. Use a plunger to create suction and dislodge the clog.If needed, use a plumber's snake (auger) to reach deeper into the drain.Flush with hot water to clear any remaining debris.Broken Electrical Outlet Repair:Issue: Non-functional electrical outlets can disrupt daily life.Steps:Turn off the circuit breaker for that outlet.Remove the outlet cover plate.Inspect for loose wires or damaged components.Tighten connections or replace the outlet if necessary.Patch Drywall Holes:Issue: Unsightly holes or cracks in drywall.Steps: Clean the hole and remove loose debris.Apply spackling compound or joint compound to fill the hole.Smooth the surface with a putty knife.Sand and paint over the patched area.Replace a Light Bulb: Issue: Burned-out light bulbs.Steps:Turn off the light switch. Unscrew the old bulb. Screw in a new bulb of the same wattage. Turn the switch back on.Fix a Running Toilet:Issue: A toilet that continues to run after flushing. Steps:Lift the tank lid and check the flapper valve. Adjust the chain or replace the flapper if it's damaged.Ensure the float is at the correct level.Test the flush to see if it stops running."
     },
     {
@@ -150,7 +183,11 @@
             "id": "106",
             "name": "Repair"
         },
+<<<<<<< HEAD
         "adress": " 1273 Woodland Avenue,  Louisiana",
+=======
+        "adress":" 1273 Woodland Avenue,  Louisiana",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "Sometimes a power surge or short circuit can cause the breaker to trip or a fuse to blow. If your air conditioner doesnطt seem to have power, we start by checking the breaker panel or fuse panel. Flipping a breaker back into position or replacing a blown fuse should restore power to the unit. A dirty or clogged air filter can reduce airflow and affect the cooling efficiency of the AC. Regularly change or clean the filter to ensure optimal performance.If you notice ice forming on the evaporator coils or other parts of the AC, the we will turn off the unit and allow it to thaw. Ice buildup can hinder proper cooling.Ensure that the supply and return vents are free from dust, debris, or obstructions. Blocked vents can restrict airflow and reduce cooling efficiency.The outdoor compressor unit needs adequate airflow. Remove any vegetation, debris, or objects around it to maintain proper ventilation.Check for leaks, gaps, or disconnected ducts. Damaged ducts can lead to inefficient cooling and uneven temperature distribution.Over time, dust and dirt can accumulate on the evaporator coils. Clean them using a soft brush or a coil cleaner to improve cooling efficiency."
     },
     {
@@ -163,7 +200,11 @@
             "id": "106",
             "name": "Repair"
         },
+<<<<<<< HEAD
         "adress": " 2744 Burning Memory Lane, Pennsylvania",
+=======
+        "adress":" 2744 Burning Memory Lane, Pennsylvania",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "Repairing a Bathroom sink involves several steps, depending on the specific issue you're facing.Before we start any repairs, we should accurately diagnose the problem. Common issues include: Leaky faucet: If you hear dripping sounds at night, it's likely a leaky faucet.Low water pressure: A clogged aerator could be the culprit. Water pooling under the sink: This might indicate a problem with the P-trap or drain gasket.Stiff valves: If turning the knob feels like an arm-wrestling match, stiff valves are likely the issue , our toolbox should include: Adjustable wrenches: These adapt to nuts and bolts of different sizes.Basin wrench: Useful for hard-to-reach spots under the sink.Channel locks (slip-joint pliers): All-purpose forceps for grasping and turning.Plumber's putty and Teflon tape: Sealants to prevent leaks at joints. Plunger: Handy for unclogging. Plumber's snake (auger): Clears stubborn blockages.Replacement kit: Includes washers and O-rings.Flashlight: Your guiding light in the dim under-sink cabinet.Always turn off the water supply before starting any repair work.Dismantling the Faucet:Use your tools to carefully disassemble the faucet. Fixing a Leaky Faucet Valve Seat:Inspect the valve seat and replace if damaged.Replacing Worn-Out Washers:Swap out old washers and O-rings with new ones.Handling a Leaky Sink Basket Strainer: Address leaks around the basket strainer.Clearing Minor Clogged Drains:Use a plunger or plumber's snake to unclog the drain"
     },
     {
@@ -176,7 +217,11 @@
             "id": "106",
             "name": "Repair"
         },
+<<<<<<< HEAD
         "adress": " 3734 Reel Avenue, New Mexico",
+=======
+        "adress":" 3734 Reel Avenue, New Mexico",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "Repairing a kitchen sink involves several steps, depending on the specific issue you're facing.Before we start any repairs, we should accurately diagnose the problem. Common issues include: Leaky faucet: If you hear dripping sounds at night, it's likely a leaky faucet.Low water pressure: A clogged aerator could be the culprit. Water pooling under the sink: This might indicate a problem with the P-trap or drain gasket.Stiff valves: If turning the knob feels like an arm-wrestling match, stiff valves are likely the issue , our toolbox should include: Adjustable wrenches: These adapt to nuts and bolts of different sizes.Basin wrench: Useful for hard-to-reach spots under the sink.Channel locks (slip-joint pliers): All-purpose forceps for grasping and turning.Plumber's putty and Teflon tape: Sealants to prevent leaks at joints. Plunger: Handy for unclogging. Plumber's snake (auger): Clears stubborn blockages.Replacement kit: Includes washers and O-rings.Flashlight: Your guiding light in the dim under-sink cabinet.Always turn off the water supply before starting any repair work.Dismantling the Faucet:Use your tools to carefully disassemble the faucet. Fixing a Leaky Faucet Valve Seat:Inspect the valve seat and replace if damaged.Replacing Worn-Out Washers:Swap out old washers and O-rings with new ones.Handling a Leaky Sink Basket Strainer: Address leaks around the basket strainer.Clearing Minor Clogged Drains:Use a plunger or plumber's snake to unclog the drain"
     },
     {
@@ -189,6 +234,7 @@
             "id": "106",
             "name": "Repair"
         },
+<<<<<<< HEAD
         "adress": " 4835 Lawman Avenue, Virginia",
         "about": "Before diving into the repair process, accurately diagnose the problem affecting your washing machine. Common issues include, No power: Check the power supply, including cords and breakers.Water inlet problems: Inspect the water inlet valve for blockages or leaks. Drainage issues: Ensure proper drainage by checking the drain hose and filter. Motor malfunction: Test the motor to see if it's functioning correctly. if your washing machine is making a grinding noise, Pop the snap retainers with a screwdriver and pull the pump off the motor shaft. Disconnect the electrical connectors from the motor.Pop the bottom retainer off the motor and prop up the motor.Pop the top retainer (it's heavy) to replace the broken coupler."
     },
@@ -203,6 +249,22 @@
             "name": " cleaning"
         },
         "adress": " 1273 Woodland Avenue, Louisiana",
+=======
+        "adress":" 4835 Lawman Avenue, Virginia",
+        "about": "Before diving into the repair process, accurately diagnose the problem affecting your washing machine. Common issues include, No power: Check the power supply, including cords and breakers.Water inlet problems: Inspect the water inlet valve for blockages or leaks. Drainage issues: Ensure proper drainage by checking the drain hose and filter. Motor malfunction: Test the motor to see if it's functioning correctly. if your washing machine is making a grinding noise, Pop the snap retainers with a screwdriver and pull the pump off the motor shaft. Disconnect the electrical connectors from the motor.Pop the bottom retainer off the motor and prop up the motor.Pop the top retainer (it's heavy) to replace the broken coupler."
+    },
+    {
+        "id":"1015",
+        "name":"Mopping the floor ",
+        "contactPerson":"Maya Cameron",
+        "email":"Maya@gmail.com",
+        "image":"https://gcdnb.pbrd.co/images/NfcBFyKov8Ul.png?o=1",
+        "category":{
+            "id":"102",
+            "name":" cleaning"
+        },
+        "adress":" 1273 Woodland Avenue, Louisiana",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "Mopping the floor is an essential part of keeping your home clean.Identify Your Flooring Type. First, determine what kind of floors we're working with. Different flooring materials require specific cleaning methods and solutions.Before we start, we gather the necessary tools .Vacuum cleaner or broom and dustpan, Mop,Two buckets (one for soapy water and one for rinsing) Sponge or mop head.Fill one bucket with hot water and add the appropriate cleaning detergent for your floor type. we follow the instructions on the detergent label. Avoid using products advertised as “mop and shine,” as they can lead to yellowing over time.Sweep or vacuum the floor to remove loose dirt and debris. This prevents your floor from becoming sticky during mopping.so we dip the mop into the bucket of water and detergent, then wring it out. The mop should be damp but not sopping wet to avoid damaging the floor.Start mopping a section of the floor (about five or six square feet) moving backward to prevent tracking.Use gentle, back-and-forth motions to clean the floor thoroughly."
     },
     {
@@ -215,7 +277,11 @@
             "id": "102",
             "name": " cleaning"
         },
+<<<<<<< HEAD
         "adress": "  1150 Masonic Hill Road, Arkansas",
+=======
+        "adress":"  1150 Masonic Hill Road, Arkansas",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
         "about": "Cleaning glass can be quite straightforward, whether you're tackling windows. First cleaning Glass Windows, we have to Lay towels on the windowsills to protect them from the cleaning solution, then mix four parts water with one part white vinegar (or a few drops of liquid dish soap) to create a cleaning solution, then dip a soft cloth (such as a cotton cloth or microfiber towel) into the mixture and wring out the excess fluid, after that wipe the glass in circular motions, then use vertical and horizontal strokes to clean it, then clean corners with a cotton swab or an old, soft toothbrush, Buff the glass using an old T-shirt, newspaper, or cloth diaper until it's dry and shiny."
     }
 ]

@@ -8,6 +8,7 @@ import { useAuth } from '../../../firebase/auth'
 
 export default function admin() {
     const [list, setList] = useState([]);
+
     const { logout } = useAuth();
     const BussinessListRef = collection(db, 'businessList')
 
@@ -29,6 +30,11 @@ export default function admin() {
     }, [])
 
 
+    const [searchTitle, setSearchTitle] = useState("");
+
+    const basicData = list.filter((item) => {
+        return item.contactPerson.toLowerCase().includes(searchTitle.toLowerCase());
+    })
 
 
     const deleteBusiness = (person) => {
@@ -37,6 +43,9 @@ export default function admin() {
             console.log('done')
         })
     }
+
+
+
 
     return (
         <ScrollView>
@@ -51,9 +60,12 @@ export default function admin() {
                         </Pressable>
                     </View>
                     <View style={styles.searchBarContainer}>
+
                         <TextInput
                             placeholder='Search'
                             style={styles.textinput}
+                            onChangeText={setSearchTitle}
+                            value={searchTitle}
                         />
                         <FontAwesome name='search'
                             style={styles.searchBtn}
@@ -63,7 +75,7 @@ export default function admin() {
 
                 <View style={{ flex: 1 }}>
                     <FlatList
-                        data={list}
+                        data={basicData}
                         numColumns={1}
                         renderItem={({ item }) => (
                             <View>
@@ -74,15 +86,25 @@ export default function admin() {
                                         params: { PersonName: item.contactPerson, Email: item.email, Adress: item.adress, ProfileImage: item.image }
                                     })}
                                 >
-                                    <View style={styles.item}>
-                                        <View style={{ flexDirection: 'row' ,justifyContent:'space-between' }}>
-                                            <View>
-                                                <Text style={styles.title}>Name:<Text style={{ fontSize: 20 }}> {item.contactPerson}</Text></Text>
-                                                <Text style={styles.title}>Email:<Text style={{ fontSize: 20 }}> {item.email}</Text></Text>
-                                                <Text style={styles.title}>Adress:<Text style={{ fontSize: 20 }}> {item.adress}</Text></Text>
-                                                <Text style={styles.title}>Works on:<Text style={{ fontSize: 20 }}> {item.category.name}</Text></Text>
+                                    <View style={[styles.card, styles.boxWithShadow, styles.item]}>
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                            <View style={{ flex: 1.6 }} >
+                                                <View style={{ flexDirection: 'row', marginBottom: 10 }}>
+                                                    <Text style={styles.title}>Name:</Text><Text style={{ fontSize: 15 }}> {item.contactPerson}</Text>
+                                                </View>
+                                                <View style={{ flexDirection: 'row', marginBottom: 10 }} >
+                                                    <Text style={styles.title}>Email:</Text><Text style={{ fontSize: 15 }}> {item.email}</Text>
+                                                </View>
+                                                <View style={{ flexDirection: 'row', marginBottom: 10 }}>
+                                                    <Text style={styles.title}>Adress:</Text><Text style={{ fontSize: 15 }}> {item.adress}</Text>
+                                                </View>
+                                                <View style={{ flexDirection: 'row', marginBottom: 10 }}>
+                                                    <Text style={styles.title}>Works on:</Text><Text style={{ fontSize: 15 }}> {item.category.name}</Text>
+                                                </View>
                                             </View>
-                                            <Image source={{ uri: item.image }} style={{ width: 100, height: 100, borderRadius:100, justifyContent: 'flex-end' }} />
+                                            <View>
+                                                <Image source={{ uri: item.image }} style={styles.image} />
+                                            </View>
                                         </View>
                                         <FontAwesome name='trash-o'
                                             color='#003C43'
@@ -93,6 +115,11 @@ export default function admin() {
                                 </Pressable>
                             </View>
                         )}
+                        ListEmptyComponent={
+                            <View style={styles.emptyList}>
+                                <Text style={styles.emptyListText}>NO Services Found</Text>
+                            </View>
+                        }
                     />
                 </View>
             </View>
@@ -131,23 +158,60 @@ const styles = StyleSheet.create({
     // //////////////////
     item: {
         backgroundColor: "#E3FEF7",
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
+
+        marginHorizontal: 10,
         textAlign: "center",
         borderRadius: 15,
         borderWidth: 1,
         borderStyle: "solid",
         flex: 1,
+        overflow: false
 
     },
     title: {
-        fontSize: 25,
+        fontSize: 17,
+        fontWeight: 'bold'
 
+    },
+    card: {
+        backgroundColor: 'white',
+        borderRadius: 8,
+        paddingVertical: 25,
+        paddingHorizontal: 25,
+        width: '90%',
+        marginVertical: 10,
+    },
+    boxWithShadow: {
+        shadowColor: 'black',
+        shadowOffset: { width: 9, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 5, // Use elevation for Android
     },
     todoIcon: {
         marginTop: 5,
-        fontSize: 20,
+        fontSize: 26,
         textAlign: 'right'
     },
+    emptyList: {
+        marginTop: 20,
+        backgroundColor: '#003C43',
+        padding: 20,
+        borderRadius: 20,
+        elevation: 5,
+        shadowColor: 'black'
+
+    },
+    emptyListText: {
+        fontWeight: "bold",
+        textAlign: "center",
+        fontSize: 30,
+        color: "white"
+    },
+    image:{
+        borderRadius: 20, 
+        justifyContent: 'flex-end',
+        width:100,
+        height:150
+    }
 })

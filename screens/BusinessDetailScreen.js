@@ -11,6 +11,8 @@ import {
   Modal,
   Linking
 } from "react-native";
+
+import BokkingModal from "./BokkingModal";
 import React, { useEffect, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
@@ -18,18 +20,40 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../FirebaseConfig";
 import Reviews from "./Reviews";
+<<<<<<< HEAD
 import BokkingModal from "./BokkingModal";
+=======
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
 import { useAuth } from "../firebase/auth";
 
-export default function BusinessDetailScreen({ name, id, image }) {
+
+export default function BusinessDetailScreen({ name, id, image,adress,contactPerson }) {
   const [ReadMore, setReadMore] = useState(false);
   const [showModal, setShowModel] = useState(false);
   const [item, setItem] = useState({});
   const [loading, setLoading] = useState(false);
   const { user } = useAuth();
+<<<<<<< HEAD
   const onMessageButtonClick=()=>{
     Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
   }
+=======
+  const [showModal, setShowModel] = useState(false);
+
+  // const onMessageButtonClick=()=>{
+  //   Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' );
+  // }
+  const onMessageButtonClick = () => {
+    const emailSubject = 'I am looking for your service';
+    const emailBody = 'Hi there,';
+  
+    // Construct the mailto URL
+    const mailtoUrl = `mailto:${user?.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+  
+    // Open the user's email client
+    Linking.openURL(mailtoUrl);
+  };
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
   const getOne = async () => {
     const docRef = doc(db, `BusinessListByCategory`, id);
 
@@ -49,6 +73,7 @@ export default function BusinessDetailScreen({ name, id, image }) {
   if (loading) {
     return (
       <SafeAreaView>
+<<<<<<< HEAD
         <ScrollView>
           <View style={styles.Container}>
             <ScrollView >
@@ -147,8 +172,118 @@ export default function BusinessDetailScreen({ name, id, image }) {
                   serviceName={name}
                    serviceImage={image}/>
             </Modal>
+=======
+      <ScrollView>
+      <View style={styles.Container}>
+        <ScrollView >
+          <TouchableOpacity
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 10,
+              alignItems: "center",
+              marginTop: 40,
+              marginLeft: 10,
+            }}
+            onPress={() => router.back()}
+          >
+            <Ionicons name="arrow-back-outline" size={30} color="black" />
+          </TouchableOpacity>
+          <Image source={{ uri: image }} style={{ width: "100%", height: 300 }} />
+          <View style={styles.infoContainer}>
+            <Text style={{ fontFamily: "outfit-bold", fontSize: 25 }}>
+              {item.name}
+            </Text>
+            <View style={styles.subContainer}>
+              <Text style={{ color: "#135D66", fontSize: 20 }}>
+                {item.contactPerson}
+              </Text>
+              <Text style={styles.Category}>{item.category.name}</Text>
+            </View>
+            <View style={{ display: "flex", flexDirection: "row" }}>
+              <MaterialIcons name="location-pin" size={30} color="#135D66" />
+              <Text style={{ fontSize: 20, color: "gray" }}>
+                {item.adress}
+              </Text>
+            </View>
+          </View>
+          <View
+            style={{ borderTopWidth: 1, borderColor: "gray", marginVertical: 20 }}
+          >
+            <Text style={{ paddingHorizontal: 4 }}> About Me </Text>
+            <Text
+              style={{
+                fontFamily: "out-fit",
+                color: "gray",
+                lineHeight: 28,
+                fontSize: 16,
+                marginHorizontal: 12
+              }}
+              numberOfLines={ReadMore ? 20 : 5}
+            >
+              {item.about}
+            </Text>
+            <Pressable onPress={() => setReadMore(!ReadMore)}>
+              <Text style={{ color: "#135D66", fontSize: 20, fontWeight: "500" }}>
+                {ReadMore ? "Read Less" : " Read More"}
+              </Text>
+            </Pressable>
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
           </View>
         </ScrollView>
+<<<<<<< HEAD
+=======
+        <Reviews serviceId={id} />
+        <View style={{ display: 'flex', flexDirection: 'row', gap: 5, margin: 8 }}>
+
+          <TouchableOpacity
+           style={styles.messagebtn}
+          //  onPress={onMessageButtonClick()}
+          // onPress={Linking.openURL('mailto:'+user?.email+'?subject=I am looking for your service&body=Hi There,' )}
+           >
+            <Text
+              style={{
+                textAlign: "center",
+                fontFamily: "outfit-medium",
+                color: "#135D66",
+                fontSize: 18,
+              }}
+            >
+              Message
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+          style={styles.Bookbtn}
+          onPress={() => setShowModel(true)}
+          >
+            <Text
+              style={{
+                textAlign: "center",
+                fontFamily: "outfit-medium",
+                color: "white",
+                fontSize: 18,
+              }}
+            >
+              Book Now
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <Modal
+              animationType='slide'
+              visible={showModal}
+            >
+           <BokkingModal
+                hideModel={() => setShowModel(false)} 
+                 serviceId={id}
+                  serviceName={name}
+                   serviceImage={image}
+                   serviceAddress ={adress}
+                   servicePerson={contactPerson}
+                   />
+            </Modal>
+      </View>
+      </ScrollView>
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
       </SafeAreaView>
     );
   } else {
@@ -185,9 +320,15 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   Category: {
+<<<<<<< HEAD
     color: "#003C43",
     fontSize: 20,
     backgroundColor: "#77B0AA",
+=======
+    color: "#E3FEF7",
+    fontSize: 20,
+    backgroundColor: "#135D66",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
     padding: 5,
     borderRadius: 8,
     fontSize: 14,
