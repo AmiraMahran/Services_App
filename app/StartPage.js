@@ -16,11 +16,7 @@ export default function StartPage() {
                 </Text>
                 <Text style={{ fontSize: 15, color: '#ffff', textAlign: 'center', marginTop: 20 }}>Best App to find services near you which deliver you a professinal services</Text>
                 <Pressable style={styles.button} onPress={()=>router.push('/SignIn')}>
-<<<<<<< HEAD
-                    <Text style={{ textAlign: 'center', color: '#135D66', fontSize: 15 }}>Let's Get Started</Text>
-=======
                     <Text style={{ textAlign: 'center', color: '#003C43', fontSize: 15 }}>Let's Get Started</Text>
->>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
                 </Pressable>
             </View>
         </View>

@@ -16,11 +16,6 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "../FirebaseConfig";
 import { router, useLocalSearchParams } from 'expo-router';
-<<<<<<< HEAD
-import PageHeading from '../Components/HomeComponent/PageHeading';
-=======
-
->>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
 export default function BusinessListByCategoryScreen() {
   const { name } = useLocalSearchParams();
   const [List, setList] = useState([]);
@@ -49,11 +44,7 @@ export default function BusinessListByCategoryScreen() {
   }, []);
   return (
     <View style={{ padding: 20, paddingTop: 40, backgroundColor: '#DDDDDD', height: '100%' }}>
-<<<<<<< HEAD
-      <PageHeading title={param.category}/>
-=======
             <PageHeading title={param.category}/>
->>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
       <FlatList data={List} style={{ marginTop: 15 }} renderItem={({ item }) => <BusinessListItem all={item} />} />
     </View>
   )
