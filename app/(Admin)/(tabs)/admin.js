@@ -208,10 +208,10 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: "white"
     },
-    image:{
-        borderRadius: 20, 
+    image: {
+        borderRadius: 20,
         justifyContent: 'flex-end',
-        width:100,
-        height:150
+        width: 100,
+        height: 150
     }
 })
