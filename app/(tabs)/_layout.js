@@ -34,7 +34,11 @@ export default function TabsLayout() {
                     ),
                     tabBarLabel: "Booking",
                     headerStyle: {
+<<<<<<< HEAD
+                        backgroundColor: "#003C43",
+=======
                         backgroundColor: "#135D66",
+>>>>>>> 874b70ff0bfc9dc8a115ddae36102bd089eae5e9
                     },
                 }}
             />
