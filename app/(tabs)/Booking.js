@@ -39,8 +39,14 @@ export default function Booking() {
                     data={book}
                     renderItem={({ item, index }) => (
                         <View style={styles.container}>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' ,flex:1}}>
+                            <View style={{ flex:1}}>
 
+                                    <View>
+                                        <Image
+                                            source={{ uri: item.businessImage }}
+                                            style={{ width: 200, height: 150, borderRadius: 20, marginBottom:20 }}
+                                            />
+                                    </View>
                                 <View style={{ flex: 1.6 }}>
                                 <Text style={{ fontFamily: 'outfit-medium', marginTop: 8, flex: 1, fontSize: 18 }}>
                                     <Text style={{ fontWeight: '600' }}>Service name: </Text>
@@ -77,12 +83,6 @@ export default function Booking() {
                                     {item?.userEmail}
                                 </Text>
                                     </View>
-                                <View>
-                                    <Image
-                                        source={{ uri: item.businessImage }}
-                                        style={{ width: 200, height: 150, borderRadius: 20, justifyContent: 'flex-end', }}
-                                        />
-                                </View>
                             </View>
                         </View>
                     )}
